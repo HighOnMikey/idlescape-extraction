@@ -93,13 +93,13 @@ def main():
         try:
             compile_js(output_file, "locations", locations)
             logging.info(f"wrote {output_file}")
-        except Exception:
-            logging.error(f"unable to compile locations: {Exception}")
+        except Exception as e:
+            logging.error(f"unable to compile locations: {e}")
         try:
             subprocess.call(["node", output_file], shell=True)
             logging.info("converted locations.js to JSON")
-        except Exception:
-            logging.error(f"unable to convert locations: {Exception}")
+        except Exception as e:
+            logging.error(f"unable to convert locations: {e}")
 
     logging.info("extracting enchantments")
     enchantments = extract_enchantments(data)
@@ -108,13 +108,13 @@ def main():
         try:
             compile_js(output_file, "enchantments", enchantments)
             logging.info(f"wrote {output_file}")
-        except Exception:
-            logging.error(f"unable to compile enchantments: {Exception}")
+        except Exception as e:
+            logging.error(f"unable to compile enchantments: {e}")
         try:
             subprocess.call(["node", output_file], shell=True)
             logging.info("converted enchantments.js to JSON")
-        except Exception:
-            logging.error(f"unable to convert enchantments: {Exception}")
+        except Exception as e:
+            logging.error(f"unable to convert enchantments: {e}")
 
     logging.info("extracting items")
     items = extract_items(data)
@@ -123,13 +123,13 @@ def main():
         try:
             compile_js(output_file, "items", items)
             logging.info(f"wrote {output_file}")
-        except Exception:
-            logging.error(f"unable to compile items: {Exception}")
+        except Exception as e:
+            logging.error(f"unable to compile items: {e}")
         try:
             subprocess.call(["node", output_file], shell=True)
             logging.info("converted items.js to JSON")
-        except Exception:
-            logging.error(f"unable to convert items: {Exception}")
+        except Exception as e:
+            logging.error(f"unable to convert items: {e}")
 
 
 if __name__ == "__main__":
