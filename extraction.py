@@ -1,13 +1,18 @@
 import argparse
+import json
 import requests
 import logging
 import regex
 import subprocess
 from pathlib import Path
 
-logging.basicConfig(level=logging.INFO, format="[%(levelname)8s][%(filename)s:%(lineno)s - %(funcName)s()] %(message)s")
+logging.basicConfig(
+    level=logging.INFO,
+    format="[%(levelname)8s][%(filename)s:%(lineno)s - %(funcName)s()] %(message)s",
+)
 idlescape_site = "https://www.idlescape.com"
 default_main_chunk = "https://www.idlescape.com/static/js/main.27754d83.chunk.js"
+output_dir = Path(__file__).resolve().parent.joinpath("data")
 
 
 def parse_args():
@@ -16,8 +21,8 @@ def parse_args():
     return parser.parse_args()
 
 
-def fetch_data(args):
-    main_script = args.url
+def fetch_data(url):
+    main_script = url
     if not main_script:
         logging.info("Automatically detecting main.<hex>.chunk.js")
         main_script_re = r"main\.[a-zA-Z0-9]+\.chunk\.js"
@@ -33,18 +38,49 @@ def fetch_data(args):
     return requests.get(main_script).text
 
 
-def compile_js(output_file, name, data):
-    object_re = r"Object\(([a-zA-Z.]+)\)"
-    obj = regex.search(object_re, data)
-    with open(output_file, "w", newline="\n") as file:
-        file.write('fs = require("fs")\n')
-        if obj is not None and len(obj) > 1:
-            objs = obj[1].split(".")
-            file.write(f"let {objs[0]} = {{}}\n")
-            file.write(f"{objs[0]}.{objs[1]} = function(self, key, val) {{ self[key] = val; }}\n")
+def build_js(name, data):
+    js_file = output_dir.joinpath(f"{name}.js")
+    json_file = output_dir.joinpath(f"{name}.json")
+    try:
+        object_re = r"Object\(([a-zA-Z.]+)\)"
+        obj = regex.search(object_re, data)
+        with open(js_file, "w", newline="\n") as file:
+            file.write('fs = require("fs")\n')
+            if obj is not None and len(obj) > 1:
+                objs = obj[1].split(".")
+                file.write(f"let {objs[0]} = {{}}\n")
+                file.write(f"{objs[0]}.{objs[1]} = function(self, key, val) {{ self[key] = val; }}\n")
 
-        file.write(f"{data}\n")
-        file.write(f'fs.writeFileSync("data/{name}.json", JSON.stringify({name}), "utf-8")\n')
+            file.write(f"{data}\n")
+            file.write(f'fs.writeFileSync("{json_file.as_posix()}", JSON.stringify({name}), "utf-8")\n')
+        logging.info(f"wrote {js_file}")
+    except Exception as e:
+        logging.error(f"unable to compile locations: {e}")
+
+    try:
+        subprocess.call(["node", js_file])
+        logging.info(f"converted {name}.js to JSON")
+    except Exception as e:
+        logging.error(f"unable to convert locations: {e}")
+
+    return json_file
+
+
+def minimize_json(json_file: Path, search_keys: list):
+    json_minimized_file = json_file.with_name(f"{json_file.stem}.min.json")
+    with open(json_file, "r") as f:
+        data = json.load(f)
+
+    json_minimized_data = {}
+    for key in data:
+        json_minimized_data[key] = {}
+        for k in data[key]:
+            if k in search_keys:
+                json_minimized_data[key][k] = data[key][k]
+
+    with open(json_minimized_file, "w", newline="\n") as f:
+        json.dump(json_minimized_data, f, separators=(",", ":"))
+        logging.info(f"wrote {json_minimized_file}")
 
 
 def extract_locations(data):
@@ -79,57 +115,40 @@ def extract_items(data):
 
 def main():
     args = parse_args()
-    output_dir = Path(__file__).resolve().parent.joinpath("data")
+
     if not output_dir.exists():
         logging.info(f"creating output directory: {output_dir}")
         Path.mkdir(output_dir)
 
-    data = fetch_data(args)
+    data = fetch_data(args.url)
 
     logging.info("extracting locations")
     locations = extract_locations(data)
     if locations:
-        output_file = output_dir.joinpath("locations.js")
-        try:
-            compile_js(output_file, "locations", locations)
-            logging.info(f"wrote {output_file}")
-        except Exception as e:
-            logging.error(f"unable to compile locations: {e}")
-        try:
-            subprocess.call(["node", output_file], shell=True)
-            logging.info("converted locations.js to JSON")
-        except Exception as e:
-            logging.error(f"unable to convert locations: {e}")
+        json_file = build_js("locations", locations)
+        minimize_json(json_file, ["id", "name"])
 
     logging.info("extracting enchantments")
     enchantments = extract_enchantments(data)
     if enchantments:
-        output_file = output_dir.joinpath("enchantments.js")
-        try:
-            compile_js(output_file, "enchantments", enchantments)
-            logging.info(f"wrote {output_file}")
-        except Exception as e:
-            logging.error(f"unable to compile enchantments: {e}")
-        try:
-            subprocess.call(["node", output_file], shell=True)
-            logging.info("converted enchantments.js to JSON")
-        except Exception as e:
-            logging.error(f"unable to convert enchantments: {e}")
+        build_js("enchantments", enchantments)
 
     logging.info("extracting items")
     items = extract_items(data)
     if items:
-        output_file = output_dir.joinpath("items.js")
-        try:
-            compile_js(output_file, "items", items)
-            logging.info(f"wrote {output_file}")
-        except Exception as e:
-            logging.error(f"unable to compile items: {e}")
-        try:
-            subprocess.call(["node", output_file], shell=True)
-            logging.info("converted items.js to JSON")
-        except Exception as e:
-            logging.error(f"unable to convert items: {e}")
+        json_file = build_js("items", items)
+        minimize_json(
+            json_file,
+            [
+                "id",
+                "name",
+                "itemImage",
+                "tags",
+                "enchantmentTier",
+                "augmentationStats",
+                "augmentationCost",
+            ],
+        )
 
 
 if __name__ == "__main__":
