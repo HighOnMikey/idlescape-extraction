@@ -13,7 +13,7 @@ logging.basicConfig(
 idlescape_site = "https://www.idlescape.com"
 default_main_chunk = "https://www.idlescape.com/static/js/main.27754d83.chunk.js"
 output_dir = Path(__file__).resolve().parent.joinpath("data")
-
+skill_names = ["combat", "fishing", "foraging", "mining", "smithing"]
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -38,7 +38,7 @@ def fetch_data(url):
     return requests.get(main_script).text
 
 
-def build_js(name, data):
+def build_json(name, data):
     js_file = output_dir.joinpath(f"{name}.js")
     json_file = output_dir.joinpath(f"{name}.json")
     try:
@@ -66,21 +66,23 @@ def build_js(name, data):
     return json_file
 
 
-def minimize_json(json_file: Path, search_keys: list):
-    json_minimized_file = json_file.with_name(f"{json_file.stem}.min.json")
-    with open(json_file, "r") as f:
-        data = json.load(f)
-
+def minimize_json(data, search_keys: list, search_skills: bool = True):
     json_minimized_data = {}
     for key in data:
         json_minimized_data[key] = {}
-        for k in data[key]:
-            if k in search_keys:
-                json_minimized_data[key][k] = data[key][k]
+        for min_key in set(data[key].keys()).intersection(search_keys):
+            json_minimized_data[key][min_key] = data[key][min_key]
+        if not search_skills:
+            continue
+        for skill_key in set(data[key].keys()).intersection(skill_names):
+            for min_key in set(data[key][skill_key].keys()).intersection(search_keys):
+                json_minimized_data[key][min_key] = data[key][skill_key][min_key]
 
-    with open(json_minimized_file, "w", newline="\n") as f:
-        json.dump(json_minimized_data, f, separators=(",", ":"))
-        logging.info(f"wrote {json_minimized_file}")
+    return json_minimized_data
+
+
+def minimize_names_only(data, search_skills: bool = True):
+    return {x:v["name"] for x, v in minimize_json(data, ["name"], search_skills).items()}
 
 
 def extract_locations(data):
@@ -125,20 +127,26 @@ def main():
     logging.info("extracting locations")
     locations = extract_locations(data)
     if locations:
-        json_file = build_js("locations", locations)
-        minimize_json(json_file, ["id", "name"])
+        json_file = build_json("locations", locations)
+        json_data = json.load(open(json_file, "r"))
+        name_data = minimize_names_only(json_data)
+        json.dump(name_data, open(json_file.with_stem(f"{json_file.stem}.names"), "w"), separators=(",", ":"))
 
     logging.info("extracting enchantments")
     enchantments = extract_enchantments(data)
     if enchantments:
-        build_js("enchantments", enchantments)
+        json_file = build_json("enchantments", enchantments)
+        json_data = json.load(open(json_file, "r"))
+        name_data = minimize_names_only(json_data, False)
+        json.dump(name_data, open(json_file.with_stem(f"{json_file.stem}.names"), "w"), separators=(",", ":"))
 
     logging.info("extracting items")
     items = extract_items(data)
     if items:
-        json_file = build_js("items", items)
-        minimize_json(
-            json_file,
+        json_file = build_json("items", items)
+        json_data = json.load(open(json_file, "r"))
+        min_data = minimize_json(
+            json_data,
             [
                 "id",
                 "name",
@@ -148,7 +156,11 @@ def main():
                 "augmentationStats",
                 "augmentationCost",
             ],
+            False
         )
+        json.dump(min_data, open(json_file.with_stem(f"{json_file.stem}.min"), "w"), separators=(",", ":"))
+        name_data = minimize_names_only(json_data)
+        json.dump(name_data, open(json_file.with_stem(f"{json_file.stem}.names"), "w"), separators=(",", ":"))
 
 
 if __name__ == "__main__":
