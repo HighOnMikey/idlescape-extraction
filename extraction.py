@@ -55,13 +55,13 @@ def build_json(name, data):
             file.write(f'fs.writeFileSync("{json_file.as_posix()}", JSON.stringify({name}), "utf-8")\n')
         logging.info(f"wrote {js_file}")
     except Exception as e:
-        logging.error(f"unable to compile locations: {e}")
+        logging.error(f"unable to compile {name}: {e}")
 
     try:
         subprocess.call(["node", js_file])
         logging.info(f"converted {name}.js to JSON")
     except Exception as e:
-        logging.error(f"unable to convert locations: {e}")
+        logging.error(f"unable to convert {name}: {e}")
 
     return json_file
 
