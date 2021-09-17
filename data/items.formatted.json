@@ -9210,9 +9210,6 @@
     "augmentationCost": { "1548": 1, "1549": 40 },
     "value": 12000000,
     "tradeable": true,
-    "craftingLevel": 1,
-    "craftingExperience": 0,
-    "requiredResources": { "1548": 6 },
     "style": "slash",
     "oneHanded": false,
     "defenseBonus": {
@@ -9254,7 +9251,6 @@
     "craftingDescription": "TEMPORARY BALANCING RECIPE. WILL BE REMOVED ON 8 September",
     "extraTooltipInfo": "Its vorpal edge seems to shimmer and distort as you examine it. Is there anything that could possibly stop it?",
     "visual": "scythe",
-    "category": "Rare",
     "augmentationStats": [
       { "description": "Attack (Accuracy):", "value": 9 },
       { "description": "Strength (Melee):", "value": 9 }
@@ -9798,7 +9794,7 @@
     "skillIcon": "/images/enchanting/enchanting_logo.png",
     "class": "enchanted-scroll",
     "actionButton": "Craft",
-    "extraTooltipInfo": "Gain a 10% chance to instantly burn logs for double heat when you find them.",
+    "extraTooltipInfo": "Gain a 10% chance to instantly burn Logs and Branches for double heat every foraging action.",
     "tags": ["enchanting", "enchant", "hatchet"]
   },
   "1602": {
@@ -9997,7 +9993,7 @@
     "skillIcon": "/images/enchanting/enchanting_logo.png",
     "class": "enchanted-scroll",
     "actionButton": "Craft",
-    "extraTooltipInfo": "Increase action speed by 4%.",
+    "extraTooltipInfo": "Increases non-combat action speed by 4%.",
     "tags": ["enchanting", "enchant", "ring", "necklace"]
   },
   "1609": {
@@ -10026,7 +10022,7 @@
     "skillIcon": "/images/enchanting/enchanting_logo.png",
     "class": "enchanted-scroll",
     "actionButton": "Craft",
-    "extraTooltipInfo": "Increases your chance to find chests while gathering.",
+    "extraTooltipInfo": "Increase your chance to gain chests while gathering by 20%.",
     "tags": ["enchanting", "enchant", "gloves", "boots"]
   },
   "1610": {
@@ -10078,7 +10074,7 @@
     "skillIcon": "/images/enchanting/enchanting_logo.png",
     "class": "enchanted-scroll",
     "actionButton": "Craft",
-    "extraTooltipInfo": "Gain 5% chance to critically hit the enemy.",
+    "extraTooltipInfo": "Gain a 5% chance on hit to critically strike, dealing 130% damage.",
     "tags": ["enchanting", "enchant", "weapon"]
   },
   "1612": {
@@ -10129,7 +10125,7 @@
     "skillIcon": "/images/enchanting/enchanting_logo.png",
     "class": "enchanted-scroll",
     "actionButton": "Craft",
-    "extraTooltipInfo": "Increases your accuracy by 5%",
+    "extraTooltipInfo": "Increase the players accuracy bonus 5%.",
     "tags": ["enchanting", "enchant", "weapon"]
   },
   "1614": {
@@ -10180,7 +10176,7 @@
     "skillIcon": "/images/enchanting/enchanting_logo.png",
     "class": "enchanted-scroll",
     "actionButton": "Craft",
-    "extraTooltipInfo": "10% of your shields defenses are converted to accuracy. It no longer provides any defensive bonuses.",
+    "extraTooltipInfo": "Gain 10% of the shield's average melee defense as accuracy. The shield no longer provides any defensive bonuses.",
     "tags": ["enchanting", "enchant", "shield"]
   },
   "1616": {
@@ -10208,7 +10204,7 @@
     "skillIcon": "/images/enchanting/enchanting_logo.png",
     "class": "enchanted-scroll",
     "actionButton": "Craft",
-    "extraTooltipInfo": "Boost your health regen rate.",
+    "extraTooltipInfo": "Passive healing is increased by 0.5 health per minute.",
     "tags": ["enchanting", "enchant", "shield"]
   },
   "1617": {
@@ -10272,7 +10268,7 @@
     "skillIcon": "/images/enchanting/enchanting_logo.png",
     "class": "enchanted-scroll",
     "actionButton": "Craft",
-    "extraTooltipInfo": "Decreases enemy's accuracy by 5%",
+    "extraTooltipInfo": "Reduce the enemy's chance to hit by 5%.",
     "tags": ["enchanting", "enchant", "helm", "body", "legs"]
   },
   "1619": {
@@ -10459,7 +10455,7 @@
     "skillIcon": "/images/enchanting/enchanting_logo.png",
     "class": "enchanted-scroll",
     "actionButton": "Craft",
-    "extraTooltipInfo": "2% reduced costs when crafting.",
+    "extraTooltipInfo": "Each crafted item costs 2% less ingredients.",
     "tags": ["enchanting", "enchant", "gloves", "boots"]
   },
   "1626": {
@@ -10573,7 +10569,7 @@
     "skillIcon": "/images/enchanting/enchanting_logo.png",
     "class": "enchanted-scroll",
     "actionButton": "Craft",
-    "extraTooltipInfo": "Gain 5% chance to find shrimps in any food you cook.",
+    "extraTooltipInfo": "Gain 5% chance per cooking action to gain one Raw Shrimp.",
     "tags": ["enchanting", "enchant", "gloves", "boots"]
   },
   "1630": {
@@ -10602,7 +10598,7 @@
     "skillIcon": "/images/enchanting/enchanting_logo.png",
     "class": "enchanted-scroll",
     "actionButton": "Craft",
-    "extraTooltipInfo": "Gain 1 more essence when you gain essence",
+    "extraTooltipInfo": "Gain 1 more essence per action where essence is acquired.",
     "tags": ["enchanting", "enchant", "gloves", "boots"]
   },
   "1631": {
@@ -10652,7 +10648,7 @@
     "skillIcon": "/images/enchanting/enchanting_logo.png",
     "class": "enchanted-scroll",
     "actionButton": "Craft",
-    "extraTooltipInfo": "Increases your chances of finding rare items from slain enemies by 3%.",
+    "extraTooltipInfo": "Increases your chance of finding items from slain enemies by 3%.",
     "tags": ["enchanting", "enchant", "gloves", "boots"]
   },
   "1633": {
@@ -10680,7 +10676,7 @@
     "skillIcon": "/images/enchanting/enchanting_logo.png",
     "class": "enchanted-scroll",
     "actionButton": "Craft",
-    "extraTooltipInfo": "5% chance to automatically smelt ores an additional time while smithing.",
+    "extraTooltipInfo": "Gain a 5% chance per smithing action to complete another smithing action.",
     "tags": ["enchanting", "enchant", "gloves", "boots"]
   },
   "1634": {
@@ -10709,7 +10705,7 @@
     "skillIcon": "/images/enchanting/enchanting_logo.png",
     "class": "enchanted-scroll",
     "actionButton": "Craft",
-    "extraTooltipInfo": "Destroys junk drops when mined, granting 5 mining experience each",
+    "extraTooltipInfo": "Sand, Stone and Clay mined will be destroyed and provide 5 mining experience per piece.",
     "tags": ["enchanting", "enchant", "pickaxe"]
   },
   "1635": {
@@ -10738,7 +10734,7 @@
     "skillIcon": "/images/enchanting/enchanting_logo.png",
     "class": "enchanted-scroll",
     "actionButton": "Craft",
-    "extraTooltipInfo": "Gain 5% chance to collect bonus logs while foraging.",
+    "extraTooltipInfo": "Gain a 5% chance to generate a random log or branch every foraging action.",
     "tags": ["enchanting", "enchant", "hatchet"]
   },
   "1636": {
@@ -10878,7 +10874,7 @@
     "skillIcon": "/images/enchanting/enchanting_logo.png",
     "class": "enchanted-scroll",
     "actionButton": "Craft",
-    "extraTooltipInfo": "Gain a chance to get up to 1000 gold coins when harvesting.",
+    "extraTooltipInfo": "Gain a fixed 10% chance per harvested plant to get 1000 Gold Coins.",
     "tags": ["enchanting", "enchant", "hoe"]
   },
   "1641": {
@@ -12723,6 +12719,7 @@
     "isBossToken": true,
     "champEncounter": 700,
     "enchantmentTier": 0,
+    "tradeable": true,
     "requiredResources": {
       "5": 150000,
       "6": 150000,
@@ -12817,7 +12814,7 @@
     "name": "Scrap of Stained Parchment",
     "id": 9007,
     "value": 7500,
-    "tradeable": false,
+    "tradeable": true,
     "itemImage": "/images/misc/keys/goblin_map_piece.png",
     "extraTooltipInfo": "A scrap of parchment that appears to be a part of a map.",
     "class": "gem",
@@ -12853,7 +12850,7 @@
     "name": "Dark Key Piece",
     "id": 9009,
     "value": 100000,
-    "tradeable": false,
+    "tradeable": true,
     "itemImage": "/images/misc/keys/fortress_key_piece.png",
     "extraTooltipInfo": "A piece of dark metal that looks like part of a key.",
     "class": "gem",
