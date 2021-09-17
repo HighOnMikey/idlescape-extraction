@@ -1,5 +1,7 @@
 import argparse
 import json
+import platform
+
 import requests
 import logging
 import regex
@@ -15,9 +17,11 @@ default_main_chunk = "https://www.idlescape.com/static/js/main.27754d83.chunk.js
 output_dir = Path(__file__).resolve().parent.joinpath("data")
 skill_names = ["combat", "fishing", "foraging", "mining", "smithing"]
 
+
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--url")
+    parser.add_argument("--format", action="store_true")
     return parser.parse_args()
 
 
@@ -59,7 +63,7 @@ def build_json(name, data):
 
     try:
         subprocess.call(["node", js_file])
-        logging.info(f"converted {name}.js to JSON")
+        logging.info(f"converted {js_file.name} to JSON")
     except Exception as e:
         logging.error(f"unable to convert {name}: {e}")
 
@@ -115,6 +119,16 @@ def extract_items(data):
     return data_string
 
 
+def format_json(json_file):
+    try:
+        prettier = "prettier.cmd" if platform.system() == "Windows" else "prettier"
+        formatted_file = json_file.with_stem(f"{json_file.stem}.formatted")
+        with open(formatted_file, "w", newline="\n") as file:
+            subprocess.run([prettier, "--parser", "json", json_file], stdout=file)
+    except Exception as e:
+        logging.error(f"unable to format {json_file}: {e}")
+
+
 def main():
     args = parse_args()
 
@@ -124,6 +138,9 @@ def main():
 
     data = fetch_data(args.url)
 
+    if args.format:
+        logging.info("formatting json after extraction")
+
     logging.info("extracting locations")
     locations = extract_locations(data)
     if locations:
@@ -132,6 +149,10 @@ def main():
         name_data = minimize_names_only(json_data)
         json.dump(name_data, open(json_file.with_stem(f"{json_file.stem}.names"), "w"), separators=(",", ":"))
 
+        if args.format:
+            logging.info(f"formatting {json_file.name}")
+            format_json(json_file)
+
     logging.info("extracting enchantments")
     enchantments = extract_enchantments(data)
     if enchantments:
@@ -139,6 +160,10 @@ def main():
         json_data = json.load(open(json_file, "r"))
         name_data = minimize_names_only(json_data, False)
         json.dump(name_data, open(json_file.with_stem(f"{json_file.stem}.names"), "w"), separators=(",", ":"))
+
+        if args.format:
+            logging.info(f"formatting {json_file.name}")
+            format_json(json_file)
 
     logging.info("extracting items")
     items = extract_items(data)
@@ -161,6 +186,10 @@ def main():
         json.dump(min_data, open(json_file.with_stem(f"{json_file.stem}.min"), "w"), separators=(",", ":"))
         name_data = minimize_names_only(json_data)
         json.dump(name_data, open(json_file.with_stem(f"{json_file.stem}.names"), "w"), separators=(",", ":"))
+
+        if args.format:
+            logging.info(f"formatting {json_file.name}")
+            format_json(json_file)
 
 
 if __name__ == "__main__":
