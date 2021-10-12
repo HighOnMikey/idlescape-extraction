@@ -378,6 +378,14 @@
     "consumable": false,
     "buffIcon": "/images/magic/buffs/embers_icon.png"
   },
+  "47": {
+    "id": 47,
+    "name": "Aspect of Chaos",
+    "strengthPerLevel": 0.05,
+    "combat": true,
+    "consumable": false,
+    "buffIcon": "/images/magic/buffs/embers_icon.png"
+  },
   "1000": {
     "id": 1000,
     "name": "Impenetrable Defense",

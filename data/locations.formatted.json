@@ -783,7 +783,8 @@
   "700": { "name": "Giant's Keep", "id": 700, "scrollID": 9000 },
   "701": { "name": "Goblin Village", "id": 701, "scrollID": 9006 },
   "702": { "name": "Black Knight's Fortress", "id": 702, "scrollID": 9008 },
-  "703": { "name": "Ancient Barrows", "id": 703, "scrollID": 9009 },
+  "703": { "name": "Ancient Barrows", "id": 703, "scrollID": 9010 },
+  "704": { "name": "Palace of Flames", "id": 704, "scrollID": 9011 },
   "9001": {
     "name": "The Duel Arena",
     "id": 9001,
@@ -800,7 +801,7 @@
     "combat": {
       "password": "it's time to t-t-t-test",
       "encounters": [
-        { "weight": 1, "monsters": [{ "id": 31, "statOverride": [] }] }
+        { "weight": 1, "monsters": [{ "id": 206, "statOverride": [] }] }
       ]
     }
   }

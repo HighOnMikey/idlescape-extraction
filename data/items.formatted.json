@@ -422,7 +422,7 @@
     "extraTooltipInfo": "An unnaturally glittering ore sourced from the deepest of delves. May be smelted into bars with the aid of ichor.",
     "itemImage": "/images/mining/stygian_ore.png",
     "class": "ore",
-    "tags": ["ore", "stygian", "mining", "enchanting"]
+    "tags": ["ore", "stygian", "mining", "enchanting", "smithing"]
   },
   "150": {
     "id": 150,
@@ -9365,22 +9365,91 @@
     "tags": ["cooking", "consumable", "food"]
   },
   "1553": {
-    "name": "dev cape, don't leak",
+    "name": "Crystal Mace",
     "id": 1553,
-    "value": 9,
-    "tradeable": false,
-    "extraTooltipInfo": "yes",
-    "itemImage": "/images/cooking/banana.png",
-    "tags": ["cape"]
+    "slot": "weapon",
+    "enchantmentTier": 8,
+    "augmentationCost": { "207": 100, "516": 1000 },
+    "value": 6360000,
+    "tradeable": true,
+    "style": "crush",
+    "oneHanded": true,
+    "defenseBonus": {
+      "stab": 0,
+      "slash": 0,
+      "crush": 0,
+      "magic": 0,
+      "range": 0
+    },
+    "attackBonus": { "accuracy": 140 },
+    "strengthBonus": { "melee": 124, "range": 0, "magic": 33 },
+    "attackSpeed": 3.4,
+    "requiredLevel": {
+      "constitution": 1,
+      "attack": 85,
+      "strength": 1,
+      "defense": 1
+    },
+    "criticalBonus": { "criticalChance": 0, "criticalMultiplier": 1.25 },
+    "styleAccuracyBonus": { "melee": 0, "range": 0, "magic": 0 },
+    "armorBonus": { "protection": 0, "resistance": 0, "agility": 0 },
+    "damageTypeBonus": {
+      "fire": 0,
+      "ice": 0,
+      "earth": 0,
+      "light": 0,
+      "dark": 0
+    },
+    "armorTypeBonus": {
+      "fire": 0,
+      "ice": 0,
+      "earth": 0,
+      "light": 0,
+      "dark": 0
+    },
+    "itemImage": "/images/combat/equipment/crystal_mace.png",
+    "itemIcon": "/images/combat/equipment/crystal_mace_icon.png",
+    "extraTooltipInfo": "A manifested shard of chaos. If only you knew how to utilize it's energy to perform magic!",
+    "class": "equipment",
+    "visual": "crystal-mace",
+    "category": ["weapon", "combat"],
+    "augmentationStats": [
+      { "description": "Attack (Accuracy):", "value": 5 },
+      { "description": "Strength (Melee):", "value": 5 },
+      { "description": "Strength (Magic):", "value": 2.5 }
+    ],
+    "tags": ["melee", "weapon", "equipment", "onehand", "unique"]
   },
   "1554": {
-    "name": "magic bow",
     "id": 1554,
-    "value": 9,
+    "slot": "ring",
+    "name": "Signet Ring",
+    "value": 450000,
     "tradeable": false,
-    "extraTooltipInfo": "yes",
-    "itemImage": "/images/cooking/banana.png",
-    "tags": ["cape"]
+    "enchantmentTier": 3,
+    "augmentationCost": { "207": 50, "516": 500 },
+    "forcedEnchant": 47,
+    "forcedEnchantAmount": 3,
+    "overwriteEnchant": false,
+    "attackBonus": { "accuracy": 5 },
+    "defenseBonus": {
+      "stab": 0,
+      "slash": 0,
+      "crush": 0,
+      "magic": 2.5,
+      "range": 0
+    },
+    "strengthBonus": { "melee": 5, "range": 0, "magic": 5 },
+    "itemImage": "/images/jewellery/signet_ring.png",
+    "class": "equipment",
+    "extraTooltipInfo": "Carries the signature of some unknown entity.",
+    "augmentationStats": [
+      { "description": "Attack (Accuracy):", "value": 0.5 },
+      { "description": "Strength (Melee):", "value": 0.5 },
+      { "description": "Strength (Magic):", "value": 0.5 },
+      { "description": "Defense (Magic):", "value": 1 }
+    ],
+    "tags": ["jewelry", "equipment"]
   },
   "1555": {
     "name": "essence to talisman resource",
@@ -10121,7 +10190,7 @@
     },
     "value": 2000,
     "enchantName": "accuracy",
-    "itemImage": "/images/enchanting/scroll_of_critical_strike.png",
+    "itemImage": "/images/enchanting/scroll_of_accuracy.png",
     "skillIcon": "/images/enchanting/enchanting_logo.png",
     "class": "enchanted-scroll",
     "actionButton": "Craft",
@@ -10730,7 +10799,7 @@
     },
     "value": 2000,
     "enchantName": "nature",
-    "itemImage": "/images/enchanting/scroll_of_the_nature.png",
+    "itemImage": "/images/enchanting/scroll_of_nature.png",
     "skillIcon": "/images/enchanting/enchanting_logo.png",
     "class": "enchanted-scroll",
     "actionButton": "Craft",
@@ -10842,7 +10911,7 @@
     },
     "value": 2000,
     "enchantName": "farming",
-    "itemImage": "/images/enchanting/scroll_farming.png",
+    "itemImage": "/images/enchanting/scroll_of_farming.png",
     "skillIcon": "/images/enchanting/enchanting_logo.png",
     "class": "enchanted-scroll",
     "actionButton": "Craft",
@@ -10870,7 +10939,7 @@
     },
     "value": 2000,
     "enchantName": "Gold Digger",
-    "itemImage": "/images/enchanting/scroll_golddigger.png",
+    "itemImage": "/images/enchanting/scroll_of_the_gold_digger.png",
     "skillIcon": "/images/enchanting/enchanting_logo.png",
     "class": "enchanted-scroll",
     "actionButton": "Craft",
@@ -10900,7 +10969,7 @@
     },
     "value": 2000,
     "enchantName": "Fertilizing",
-    "itemImage": "/images/enchanting/scroll_fertilizing.png",
+    "itemImage": "/images/enchanting/scroll_of_fertilizing.png",
     "skillIcon": "/images/enchanting/enchanting_logo.png",
     "class": "enchanted-scroll",
     "actionButton": "Craft",
@@ -10928,7 +10997,7 @@
     },
     "value": 2000,
     "enchantName": "Cultivation",
-    "itemImage": "/images/enchanting/scroll_cultivation.png",
+    "itemImage": "/images/enchanting/scroll_of_cultivation.png",
     "skillIcon": "/images/enchanting/enchanting_logo.png",
     "class": "enchanted-scroll",
     "actionButton": "Craft",
@@ -12866,7 +12935,29 @@
     "champEncounter": 703,
     "itemImage": "/images/magic/prismatic_gem.png",
     "extraTooltipInfo": "It's drawing you deep into forgotten lands...",
-    "class": "gem",
+    "class": "key",
+    "tags": ["scroll", "champion", "elite", "challenge"]
+  },
+  "9011": {
+    "name": "Burning Feather",
+    "id": 9011,
+    "value": 2000000,
+    "tradeable": true,
+    "isChampScroll": true,
+    "isBossToken": true,
+    "champEncounter": 704,
+    "requiredResources": {
+      "5": 25000,
+      "502": 3,
+      "512": 2500,
+      "8006": 3,
+      "9003": 1
+    },
+    "craftingLevel": 65,
+    "craftingExperience": 45000,
+    "itemImage": "images/fishing/feather.png",
+    "extraTooltipInfo": "Its flame is fueled by an unknown source...",
+    "class": "key",
     "tags": ["scroll", "champion", "elite", "challenge"]
   },
   "10000": {
