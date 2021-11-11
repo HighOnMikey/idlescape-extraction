@@ -188,7 +188,7 @@
   "23": {
     "id": 23,
     "name": "Fishing",
-    "strengthPerLevel": 0.05,
+    "strengthPerLevel": 0.025,
     "combat": false,
     "consumable": true,
     "buffIcon": "/images/magic/buffs/fishing.png"
@@ -386,6 +386,62 @@
     "consumable": false,
     "buffIcon": "/images/magic/buffs/embers_icon.png"
   },
+  "48": {
+    "id": 48,
+    "name": "Fishing Magnetism",
+    "strengthPerLevel": 2,
+    "combat": false,
+    "consumable": true,
+    "buffIcon": "/images/magic/buffs/fishingmagnetism_icon.png"
+  },
+  "49": {
+    "id": 49,
+    "name": "Pungent Bait",
+    "strengthPerLevel": 3,
+    "combat": false,
+    "consumable": true,
+    "buffIcon": "/images/magic/buffs/pungentbait_icon.png"
+  },
+  "50": {
+    "id": 50,
+    "name": "Reinforced Line",
+    "strengthPerLevel": 3,
+    "combat": false,
+    "consumable": true,
+    "buffIcon": "/images/magic/buffs/reinforcedline_icon.png"
+  },
+  "51": {
+    "id": 51,
+    "name": "Bait Preservation",
+    "strengthPerLevel": 0.04,
+    "combat": false,
+    "consumable": true,
+    "buffIcon": "/images/magic/buffs/preservation_icon.png"
+  },
+  "52": {
+    "id": 52,
+    "name": "Oil Spill",
+    "strengthPerLevel": 0.05,
+    "combat": false,
+    "consumable": true,
+    "buffIcon": "/images/magic/buffs/oilspill_icon.png"
+  },
+  "53": {
+    "id": 53,
+    "name": "Deadliest Catch",
+    "strengthPerLevel": 0.05,
+    "combat": false,
+    "consumable": true,
+    "buffIcon": "/images/magic/buffs/deadliestcatch_icon.png"
+  },
+  "54": {
+    "id": 54,
+    "name": "Master Chef",
+    "strengthPerLevel": 0.04,
+    "combat": false,
+    "consumable": true,
+    "buffIcon": "/images/magic/buffs/masterchef_icon.png"
+  },
   "1000": {
     "id": 1000,
     "name": "Impenetrable Defense",
@@ -506,5 +562,13 @@
     "consumable": true,
     "setBonus": true,
     "buffIcon": "/images/magic/buffs/overhealing_icon.png"
+  },
+  "10001": {
+    "id": 10001,
+    "name": "Master Fisherman",
+    "strengthPerLevel": 0.1,
+    "combat": false,
+    "consumable": true,
+    "buffIcon": "/images/magic/buffs/fishing.png"
   }
 }

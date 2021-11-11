@@ -12,7 +12,7 @@
       "activeMessage": "Mining in the clay pit",
       "itemImage": "/images/mining/Place-ClayPits.png",
       "imageIsBackground": true,
-      "loot": [108, 101, 102, 109, 110],
+      "loot": [108, 101, 102, 109, 110, 11011],
       "skillIcon": "images/mining/iron_pickaxe.png",
       "actionButton": "Mine"
     }
@@ -30,7 +30,7 @@
       "activeMessage": "Mining in the city outskirts",
       "itemImage": "/images/mining/Place-CityOutskirts.png",
       "imageIsBackground": true,
-      "loot": [101, 102, 108, 109, 110, 103, 112],
+      "loot": [101, 102, 108, 109, 110, 103, 112, 11011],
       "skillIcon": "images/mining/iron_pickaxe.png",
       "actionButton": "Mine"
     },
@@ -53,7 +53,7 @@
       "skill": "foraging",
       "itemImage": "/images/foraging/grasslands.png",
       "imageIsBackground": true,
-      "loot": [151, 2016, 2021, 2023, 155, 2027, 158, 301, 302],
+      "loot": [151, 2016, 2021, 2023, 155, 2027, 158, 301, 302, 11012],
       "skillIcon": "images/foraging/foraging_icon.png",
       "actionButton": "Forage"
     },
@@ -104,7 +104,7 @@
       "activeMessage": "Mining near a small village",
       "itemImage": "/images/mining/Place-Village.png",
       "imageIsBackground": true,
-      "loot": [109, 103, 112],
+      "loot": [109, 103, 112, 11011],
       "skillIcon": "images/mining/iron_pickaxe.png",
       "actionButton": "Mine"
     }
@@ -139,7 +139,9 @@
       "skill": "foraging",
       "itemImage": "/images/foraging/the_tangle.png",
       "imageIsBackground": true,
-      "loot": [2022, 159, 2026, 175, 2028, 176, 153, 301, 302, 303, 304, 305],
+      "loot": [
+        2022, 159, 2026, 175, 2028, 176, 153, 301, 302, 303, 304, 305, 11012
+      ],
       "skillIcon": "images/foraging/foraging_icon.png",
       "actionButton": "Forage"
     }
@@ -236,7 +238,9 @@
       "skill": "foraging",
       "itemImage": "/images/foraging/verdant_valley.png",
       "imageIsBackground": true,
-      "loot": [2016, 2021, 151, 2025, 157, 2029, 154, 170, 301, 302, 303],
+      "loot": [
+        2016, 2021, 151, 2025, 157, 2029, 154, 170, 301, 302, 303, 11012
+      ],
       "skillIcon": "images/foraging/foraging_icon.png",
       "actionButton": "Forage"
     }
@@ -253,7 +257,9 @@
       "skill": "foraging",
       "itemImage": "/images/foraging/fungal_grotto.png",
       "imageIsBackground": true,
-      "loot": [2020, 161, 2023, 155, 2021, 151, 301, 170, 171, 172, 175, 176],
+      "loot": [
+        2020, 161, 2023, 155, 2021, 151, 301, 170, 171, 172, 175, 176, 11012
+      ],
       "skillIcon": "images/foraging/foraging_icon.png",
       "actionButton": "Forage"
     }
@@ -410,12 +416,11 @@
       "name": "Shallow Pond",
       "tool": "net",
       "level": 1,
-      "time": 10000,
+      "time": 8500,
       "skill": "fishing",
       "itemImage": "/images/fishing/net_fishing.jpg",
       "imageIsBackground": true,
-      "loot": [60, 61],
-      "requiredResources": { "690": 1 },
+      "loot": [60, 61, 72, 71, 11030],
       "class": "none",
       "skillIcon": "images/fishing/fishing_logo.png",
       "actionButton": "Fish"
@@ -430,12 +435,11 @@
       "name": "Lazy River",
       "id": 101,
       "level": 20,
-      "time": 10000,
+      "time": 9500,
       "skill": "fishing",
       "itemImage": "/images/fishing/fly_fishing.jpg",
       "imageIsBackground": true,
-      "loot": [62, 63],
-      "requiredResources": { "691": 1, "700": 1 },
+      "loot": [62, 63, 73, 71, 72, 11030, 11031],
       "class": "none",
       "skillIcon": "images/fishing/fishing_logo.png",
       "actionButton": "Fish"
@@ -449,13 +453,12 @@
     "fishing": {
       "name": "Still Lake",
       "id": 102,
-      "level": 40,
-      "time": 10000,
+      "level": 50,
+      "time": 10500,
       "skill": "fishing",
       "itemImage": "/images/fishing/cage_fishing.jpg",
       "imageIsBackground": true,
-      "loot": [64],
-      "requiredResources": { "692": 1 },
+      "loot": [64, 68, 77, 74, 73, 72, 71, 11030, 11031, 11032],
       "class": "none",
       "skillIcon": "images/fishing/fishing_logo.png",
       "actionButton": "Fish"
@@ -469,13 +472,40 @@
     "fishing": {
       "name": "Open Ocean",
       "id": 103,
-      "level": 50,
-      "time": 10000,
+      "level": 65,
+      "time": 11500,
       "skill": "fishing",
       "itemImage": "/images/fishing/harpoon_fishing.jpg",
       "imageIsBackground": true,
-      "loot": [65, 66],
-      "requiredResources": { "693": 1 },
+      "loot": [65, 66, 67, 69, 70, 71, 75, 76, 11030, 11031, 11032],
+      "class": "none",
+      "skillIcon": "images/fishing/fishing_logo.png",
+      "actionButton": "Fish"
+    }
+  },
+  "54": {
+    "name": "Stormy Seas",
+    "id": 54,
+    "locationIcon": "",
+    "locationCoords": [0, 0],
+    "fishing": {
+      "name": "Stormy Seas",
+      "id": 104,
+      "level": 85,
+      "time": 12500,
+      "skill": "fishing",
+      "hasDangerousEncounters": true,
+      "lockout": {
+        "skill": "fishing",
+        "name": "stormySeas",
+        "duration": 10,
+        "trigger": "death",
+        "message": "The seas are too stormy to sail on right now."
+      },
+      "extraTooltipInfo": "Warning: This fishing location is dangerous.",
+      "itemImage": "/images/fishing/stormy_fishing.png",
+      "imageIsBackground": true,
+      "loot": [65, 66, 67, 69, 70, 71, 75, 76, 11030, 11031, 11032],
       "class": "none",
       "skillIcon": "images/fishing/fishing_logo.png",
       "actionButton": "Fish"
