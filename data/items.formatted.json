@@ -10542,7 +10542,7 @@
     },
     "value": 2000,
     "enchantName": "protection",
-    "itemImage": "/images/enchanting/scroll_of_reinforcement.png",
+    "itemImage": "/images/enchanting/scroll_of_protection.png",
     "skillIcon": "/images/enchanting/enchanting_logo.png",
     "class": "enchanted-scroll",
     "actionButton": "Craft",
