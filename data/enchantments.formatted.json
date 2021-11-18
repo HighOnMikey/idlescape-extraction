@@ -421,7 +421,7 @@
   "52": {
     "id": 52,
     "name": "Oil Spill",
-    "strengthPerLevel": 0.05,
+    "strengthPerLevel": 0.075,
     "combat": false,
     "consumable": true,
     "buffIcon": "/images/magic/buffs/oilspill_icon.png"
@@ -567,6 +567,14 @@
     "id": 10001,
     "name": "Master Fisherman",
     "strengthPerLevel": 0.1,
+    "combat": false,
+    "consumable": true,
+    "buffIcon": "/images/magic/buffs/fishing.png"
+  },
+  "10002": {
+    "id": 10002,
+    "name": "Legendary Angler",
+    "strengthPerLevel": 0.25,
     "combat": false,
     "consumable": true,
     "buffIcon": "/images/magic/buffs/fishing.png"
