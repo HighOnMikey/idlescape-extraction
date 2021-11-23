@@ -13190,30 +13190,45 @@
     "name": "Nature Fragment",
     "value": 1500000,
     "tradeable": true,
+    "craftable": true,
+    "requiredResources": { "517": 500, "9003": 1 },
+    "craftingLevel": 85,
+    "craftingExperience": 0,
     "itemImage": "/images/misc/keys/Nature_Piece.png",
     "extraTooltipInfo": "A piece of living earth is imbued into this fragment.",
     "class": "gem",
-    "tags": ["key", "fragment"]
+    "tags": ["key", "fragment"],
+    "category": "Rare"
   },
   "9002": {
     "id": 9002,
     "name": "Ice Fragment",
     "value": 1500000,
     "tradeable": true,
+    "craftable": true,
+    "requiredResources": { "513": 500, "9001": 1 },
+    "craftingLevel": 85,
+    "craftingExperience": 0,
     "itemImage": "/images/misc/keys/Water_Piece.png",
     "extraTooltipInfo": "An unmelting shard of ice is imbued into this fragment.",
     "class": "gem",
-    "tags": ["key", "fragment"]
+    "tags": ["key", "fragment"],
+    "category": "Rare"
   },
   "9003": {
     "id": 9003,
     "name": "Fire Fragment",
     "value": 1500000,
     "tradeable": true,
+    "craftable": true,
+    "requiredResources": { "512": 500, "9002": 1 },
+    "craftingLevel": 85,
+    "craftingExperience": 0,
     "itemImage": "/images/misc/keys/Fire_Piece.png",
     "extraTooltipInfo": "An unfaltering gout of flames is imbued into this fragment.",
     "class": "gem",
-    "tags": ["key", "fragment"]
+    "tags": ["key", "fragment"],
+    "category": "Rare"
   },
   "9004": {
     "id": 9004,
@@ -13550,7 +13565,7 @@
       "306": 27,
       "11031": 16,
       "11032": 1,
-      "11036": 10
+      "11036": 7
     },
     "requiredResources": {
       "206": 135,
@@ -13561,7 +13576,7 @@
       "693": 8,
       "11031": 160,
       "11032": 1,
-      "11036": 100
+      "11036": 75
     },
     "craftingExperience": 28560,
     "craftingLevel": 72,
@@ -13604,7 +13619,7 @@
       "11033": 1,
       "11034": 1,
       "11035": 1,
-      "11036": 50
+      "11036": 150
     },
     "craftingExperience": 256000,
     "craftingLevel": 92,
@@ -13616,8 +13631,8 @@
     "itemImage": "/images/fishing/Master_Tacklebox.png",
     "tool": true,
     "class": "equipment",
-    "craftingDescription": "The ultimate fishing implement! Gives 40 fishing levels, 100 bait power, 100 reel power, and 60 bonus rarity.",
-    "extraTooltipInfo": "The origin of this mythical equipment is lost to history but there is no doubt regarding its power.",
+    "craftingDescription": "The ultimate fishing implement! Gives 40 fishing levels, 100 bait power, 100 reel power, and 60 bonus rarity. Enhances ancient fishing.",
+    "extraTooltipInfo": "The origin of this mythical equipment is lost to history but there is no doubt regarding its power. Enhances ancient fishing.",
     "category": "Fishing",
     "enchantable": true,
     "augmentationStats": [
@@ -13752,8 +13767,8 @@
     "requiredResources": { "69": 1 },
     "craftingMultiplier": [6],
     "itemImage": "images/fishing/bait/writhing_tentacle_hook.png",
-    "craftingDescription": "Each craft results in 6 bait. A writhing tentacle that reacts when you poke it. Reduces bait and reel power by 30 but grants a huge amount of bonus rarity... and maybe something else?",
-    "extraTooltipInfo": "An ancient writhing tentacle that reacts when you poke it. Reduces bait and reel power by 30 but grants a huge amount of bonus rarity... and maybe something else?",
+    "craftingDescription": "Each craft results in 6 bait. A writhing tentacle that reacts when you poke it. Reduces bait and reel power by 30 but grants a huge amount of bonus rarity and enhances ancient fishing.",
+    "extraTooltipInfo": "An ancient writhing tentacle that reacts when you poke it. Reduces bait and reel power by 30 but grants a huge amount of bonus rarity and enhances ancient fishing.",
     "class": "fish",
     "tags": ["bait", "fishing"],
     "category": "Fishing"
@@ -13810,10 +13825,18 @@
     "tradeable": false,
     "value": 2500000,
     "experience": 2500,
+    "craftable": true,
+    "craftingLevel": 90,
+    "craftingExperience": 15000,
+    "requiredResources": [
+      { "11032": 50, "11034": 1, "11036": 50 },
+      { "11032": 50, "11035": 1, "11036": 50 }
+    ],
     "itemImage": "images/fishing/rod_master.png",
     "extraTooltipInfo": "An ancient fishing rod, straight out of a madman's fantasy. Not much good on its own in this condition; it would take a master crafter to repair it...",
     "class": "fish",
-    "tags": ["misc", "fishing"]
+    "tags": ["misc", "fishing"],
+    "category": "Fishing"
   },
   "11034": {
     "id": 11034,
@@ -13821,10 +13844,18 @@
     "tradeable": false,
     "value": 2500000,
     "experience": 2500,
+    "craftable": true,
+    "craftingLevel": 90,
+    "craftingExperience": 15000,
+    "requiredResources": [
+      { "11032": 50, "11033": 1, "11036": 50 },
+      { "11032": 50, "11035": 1, "11036": 50 }
+    ],
     "itemImage": "images/fishing/harpoon_master.png",
     "extraTooltipInfo": "An ancient harpoon, probably dragged up from some ancient aquatic ruin. Not much good on its own in this condition; it would take a master crafter to repair it...",
     "class": "fish",
-    "tags": ["misc", "fishing"]
+    "tags": ["misc", "fishing"],
+    "category": "Fishing"
   },
   "11035": {
     "id": 11035,
@@ -13832,10 +13863,18 @@
     "tradeable": false,
     "value": 2500000,
     "experience": 2500,
+    "craftable": true,
+    "craftingLevel": 90,
+    "craftingExperience": 15000,
+    "requiredResources": [
+      { "11032": 50, "11033": 1, "11036": 50 },
+      { "11032": 50, "11034": 1, "11036": 50 }
+    ],
     "itemImage": "images/fishing/net_master.png",
     "extraTooltipInfo": "An ancient fishing net, the material it's made out of appears to be alive. Not much good on its own in this condition; it would take a master crafter to repair it...",
     "class": "fish",
-    "tags": ["misc", "fishing"]
+    "tags": ["misc", "fishing"],
+    "category": "Fishing"
   },
   "11036": {
     "id": 11036,
