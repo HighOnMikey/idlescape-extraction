@@ -578,5 +578,13 @@
     "combat": false,
     "consumable": true,
     "buffIcon": "/images/magic/buffs/fishing.png"
+  },
+  "10003": {
+    "id": 10003,
+    "name": "Jolly",
+    "strengthPerLevel": 1,
+    "combat": false,
+    "consumable": true,
+    "buffIcon": "/images/magic/buffs/fishing.png"
   }
 }

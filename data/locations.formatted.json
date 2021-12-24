@@ -512,6 +512,7 @@
     }
   },
   "400": {
+    "name": "Bronze Bar Smithing",
     "id": 400,
     "smithing": {
       "name": "Bronze bar",
@@ -532,6 +533,7 @@
     }
   },
   "401": {
+    "name": "Iron Bar Smithing",
     "id": 401,
     "smithing": {
       "name": "Iron bar",
@@ -552,6 +554,7 @@
     }
   },
   "402": {
+    "name": "Gold Bar Smithing",
     "id": 402,
     "smithing": {
       "name": "Gold bar",
@@ -572,6 +575,7 @@
     }
   },
   "403": {
+    "name": "Mithril Bar Smithing",
     "id": 403,
     "smithing": {
       "name": "Mithril bar",
@@ -592,6 +596,7 @@
     }
   },
   "404": {
+    "name": "Adamantite Bar Smithing",
     "id": 404,
     "smithing": {
       "name": "Adamantite bar",
@@ -612,6 +617,7 @@
     }
   },
   "405": {
+    "name": "Runite Bar Smithing",
     "id": 405,
     "smithing": {
       "name": "Runite bar",
@@ -632,6 +638,7 @@
     }
   },
   "406": {
+    "name": "Stygian Bar Smithing",
     "id": 406,
     "smithing": {
       "name": "Stygian bar",
@@ -651,18 +658,40 @@
       "actionButton": "Smelt"
     }
   },
+  "407": {
+    "name": "Magic Ice Bar Smithing",
+    "id": 407,
+    "christmasEvent": true,
+    "smithing": {
+      "name": "Magic Ice Bar",
+      "activeMessage": "Smelting magic ice bars",
+      "skill": "smithing",
+      "level": 1,
+      "requiredResources": { "2": 300, "7013": 3 },
+      "experience": 100,
+      "time": 106000,
+      "loot": [7034],
+      "tradeable": true,
+      "itemImage": "/images/christmas/ice_bar.png",
+      "class": "bar",
+      "extraTooltipInfo": "Used as a crafting material.",
+      "skillIcon": "images/smithing/smithing_icon.png",
+      "actionButton": "Smelt"
+    }
+  },
   "600": {
     "name": "North Pole Quarry",
     "id": 600,
     "locationIcon": "",
     "locationCoords": [0, 0],
+    "christmasEvent": true,
     "mining": {
       "name": "North Pole Quarry",
       "level": 1,
       "time": 20000,
       "skill": "mining",
       "hasDangerousEncounters": true,
-      "active": false,
+      "active": true,
       "lockout": {
         "skill": "mining",
         "name": "northPoleQuarry",
@@ -670,11 +699,11 @@
         "trigger": "death",
         "message": "Elves clubbed you."
       },
-      "activeMessage": "Mining in a fucking igloo",
+      "activeMessage": "Mining in a igloo",
       "itemImage": "/images/christmas/locations/north_pole_quarry.png",
       "imageIsBackground": true,
-      "loot": [109, 104, 105, 2015, 112, 111, 7013, 7000],
-      "extraTooltipInfo": "Warning: This mining location is dangerous. THIS IS AN EVENT ZONE",
+      "loot": [7013, 7000, 109, 2015, 111, 105, 103, 113],
+      "extraTooltipInfo": "THIS IS AN EVENT ZONE",
       "skillIcon": "/images/mining/iron_pickaxe.png",
       "actionButton": "Mine"
     }
@@ -684,13 +713,14 @@
     "id": 601,
     "locationIcon": "",
     "locationCoords": [0, 0],
+    "christmasEvent": true,
     "foraging": {
       "name": "Evergreen Forest",
       "level": 1,
       "time": 20000,
       "skill": "foraging",
       "hasDangerousEncounters": true,
-      "active": false,
+      "active": true,
       "lockout": {
         "skill": "foraging",
         "name": "evergreenForest",
@@ -700,8 +730,8 @@
       },
       "itemImage": "/images/christmas/locations/evergreen_forest.png",
       "imageIsBackground": true,
-      "loot": [301, 302, 303, 2016, 2027, 170, 171, 158, 7011, 7000],
-      "extraTooltipInfo": "Warning: This foraging location is dangerous. THIS IS AN EVENT ZONE",
+      "loot": [7011, 7000, 170, 171, 301, 302, 303, 2016, 180, 2027, 158],
+      "extraTooltipInfo": "THIS IS AN EVENT ZONE",
       "skillIcon": "images/foraging/foraging_icon.png",
       "actionButton": "Forage"
     }
@@ -711,6 +741,7 @@
     "id": 602,
     "locationIcon": "",
     "locationCoords": [0, 0],
+    "christmasEvent": true,
     "fishing": {
       "name": "Gummy Lake",
       "tool": "net",
@@ -718,7 +749,7 @@
       "time": 10000,
       "skill": "fishing",
       "hasDangerousEncounters": true,
-      "active": false,
+      "active": true,
       "lockout": {
         "skill": "fishing",
         "name": "gummyLake",
@@ -728,11 +759,10 @@
       },
       "itemImage": "/images/christmas/locations/gummy_lake.png",
       "imageIsBackground": true,
-      "loot": [2015, 60, 61, 111, 7006, 7000],
-      "requiredResources": { "2015": 1 },
+      "loot": [7039, 7006, 7000, 2015, 7004, 11030, 11031, 11036],
       "class": "none",
       "skillIcon": "images/fishing/fishing_logo.png",
-      "extraTooltipInfo": "Warning: This fishing location is dangerous. THIS IS AN EVENT ZONE",
+      "extraTooltipInfo": "THIS IS AN EVENT ZONE",
       "actionButton": "Fish"
     }
   },
@@ -741,6 +771,7 @@
     "id": 603,
     "locationIcon": "",
     "locationCoords": [0, 0],
+    "christmasEvent": true,
     "combat": {
       "active": false,
       "encounters": [
@@ -810,11 +841,23 @@
     "scrollID": 8009,
     "announceMonstersLeft": true
   },
+  "614": {
+    "name": "Stormier Seas",
+    "id": 613,
+    "scrollID": 8010,
+    "announceMonstersLeft": true
+  },
   "700": { "name": "Giant's Keep", "id": 700, "scrollID": 9000 },
   "701": { "name": "Goblin Village", "id": 701, "scrollID": 9006 },
   "702": { "name": "Black Knight's Fortress", "id": 702, "scrollID": 9008 },
   "703": { "name": "Ancient Barrows", "id": 703, "scrollID": 9010 },
   "704": { "name": "Palace of Flames", "id": 704, "scrollID": 9011 },
+  "705": {
+    "name": "Krampus' Lair",
+    "id": 705,
+    "scrollID": 9012,
+    "christmasEvent": true
+  },
   "9001": {
     "name": "The Duel Arena",
     "id": 9001,
