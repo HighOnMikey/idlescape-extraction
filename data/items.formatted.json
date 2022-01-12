@@ -382,9 +382,9 @@
     "name": "Burnt Fish",
     "value": 1,
     "tradeable": true,
+    "itemImage": "/images/cooking/burnt_fish.png",
     "itemName": "Burnt fish",
     "class": "cookedFish",
-    "itemImage": "/images/cooking/burnt_fish.png",
     "extraTooltipInfo": "The result of an overzealous cook. Perhaps studying this will make you a better cook?",
     "resourceImage": "/images/cooking/burnt_fish.png",
     "tags": ["misc", "cooking"]
@@ -394,9 +394,9 @@
     "name": "Burnt Food",
     "value": 1,
     "tradeable": true,
+    "itemImage": "/images/cooking/burnt_food.png",
     "itemName": "Burnt Food",
     "class": "cookedFish",
-    "itemImage": "/images/cooking/burnt_food.png",
     "extraTooltipInfo": "The result of an overzealous cook. Perhaps studying this will make you a better cook?",
     "resourceImage": "/images/cooking/burnt_food.png",
     "tags": ["misc", "cooking"]
@@ -8016,7 +8016,7 @@
     "itemImage": "/images/combat/equipment/zero_edge.png",
     "itemIcon": "/images/combat/equipment/zero_edge_icon.png",
     "class": "equipment",
-    "extraTooltipInfo": "Lightning never strikes twice, so surely this is an anomaly. Ability: 'Lightning Strikes Twice' - Two lightning attacks that are 50% faster, deal 25% less damage, and 5% more accurate.",
+    "extraTooltipInfo": "Lightning never strikes twice, so surely this is an anomaly. Ability: 'Lightning Strikes Twice' - Two lightning attacks that are 40% faster, deal 33% less damage, and is 15% less accurate.",
     "visual": "zero",
     "category": ["weapon", "combat"],
     "augmentationStats": [
@@ -12285,8 +12285,12 @@
     "name": "Wrapping Paper",
     "tradeable": false,
     "itemImage": "/images/christmas/wrapping_paper.png",
+    "requiredResources": { "7011": 10, "7038": 200 },
+    "craftingLevel": 1,
+    "craftingExperience": 30,
     "extraTooltipInfo": "Born to be torn apart",
     "class": "christmas-drop",
+    "category": "Christmas",
     "tags": ["christmas", "misc"]
   },
   "7003": {
@@ -12935,7 +12939,7 @@
     },
     "itemImage": "/images/christmas/christmas_gloves.png",
     "itemSet": ["jolly"],
-    "extraTooltipInfo": "A pair of mittens to keep you warm in the bitter cold! Item Set: 'Jolly' - Wearing both the Merry Maker's Mittens and Mistletoe Treads grants the Jolly buff, enabling combat in Krampus' Lair.",
+    "extraTooltipInfo": "A pair of mittens to keep you warm in the bitter cold! Wait, are they fingerless? Item Set: 'Jolly' - Wearing both the Merry Maker's Mittens and Mistletoe Treads grants the Jolly buff, enabling combat in Krampus' Lair.",
     "class": "equipment",
     "visual": "gloves",
     "augmentationStats": [],
@@ -12973,7 +12977,7 @@
     "name": "Magic Ice Bar",
     "skill": "smithing",
     "level": 1,
-    "requiredResources": { "7013": 10 },
+    "requiredResources": { "2": 100, "7013": 2 },
     "experience": 100,
     "time": 12000,
     "itemImage": "/images/christmas/ice_bar.png",
@@ -12995,18 +12999,27 @@
   "7036": {
     "name": "Scroll of Candy Canes",
     "activeMessage": "Making Scrolls of Candy Canes",
+    "enchant": true,
+    "categories": ["christmas elf gear"],
     "time": 60000,
     "id": 7036,
+    "enchantmentID": 7000,
     "level": 1,
     "experience": 100,
     "baseSuccessChance": 1,
-    "requiredResources": { "7002": 5, "7035": 25 },
+    "requiredResources": {
+      "516": 10,
+      "518": 10,
+      "519": 10,
+      "7002": 1,
+      "7035": 20
+    },
     "itemImage": "/images/christmas/xmas_scroll.png",
     "skillIcon": "/images/enchanting/enchanting_logo.png",
     "class": "enchanted-scroll",
     "actionButton": "Craft",
     "extraTooltipInfo": "A scroll enchanted with some sort of winter magic, not compatible with any gear you know of.",
-    "tags": ["enchanting", "enchant", "hatchet"]
+    "tags": ["enchanting", "enchant", "christmas"]
   },
   "7037": {
     "id": 7037,

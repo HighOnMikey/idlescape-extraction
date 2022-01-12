@@ -667,7 +667,7 @@
       "activeMessage": "Smelting magic ice bars",
       "skill": "smithing",
       "level": 1,
-      "requiredResources": { "2": 300, "7013": 3 },
+      "requiredResources": { "2": 100, "7013": 2 },
       "experience": 100,
       "time": 106000,
       "loot": [7034],
