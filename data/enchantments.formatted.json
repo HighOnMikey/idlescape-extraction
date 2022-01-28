@@ -520,7 +520,7 @@
     "strengthPerLevel": 1,
     "combat": true,
     "consumable": true,
-    "buffIcon": "/images/magic/buffs/prolonging_icon.png"
+    "buffIcon": "/images/magic/debuffs/sick.png"
   },
   "8003": {
     "id": 8003,
@@ -537,6 +537,32 @@
     "combat": true,
     "consumable": true,
     "buffIcon": "/images/magic/buffs/patience_icon.png"
+  },
+  "8005": {
+    "id": 8005,
+    "name": "Resurrection Sickness",
+    "strengthPerLevel": 1,
+    "combat": true,
+    "consumable": true,
+    "buffIcon": "/images/magic/debuffs/resurrection_sickness.png"
+  },
+  "8006": {
+    "id": 8006,
+    "name": "Overheating",
+    "strengthPerLevel": 1,
+    "combat": true,
+    "consumable": true,
+    "hideStacks": true,
+    "buffIcon": "/images/magic/debuffs/overheating.png"
+  },
+  "8007": {
+    "id": 8007,
+    "name": "Flame Resistance",
+    "strengthPerLevel": 1,
+    "combat": true,
+    "consumable": true,
+    "stackMult": 2,
+    "buffIcon": "/images/magic/buffs/flame_resistance.png"
   },
   "9000": {
     "id": 9000,
@@ -586,5 +612,13 @@
     "combat": false,
     "consumable": true,
     "buffIcon": "/images/magic/buffs/fishing.png"
+  },
+  "10004": {
+    "id": 10004,
+    "name": "Phoenix's Flame",
+    "strengthPerLevel": 1,
+    "combat": false,
+    "consumable": true,
+    "buffIcon": "/images/magic/buffs/pyromancy.png"
   }
 }

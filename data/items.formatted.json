@@ -142,6 +142,7 @@
     "isFish": true,
     "itemImage": "/images/fishing/raw_shrimp.png",
     "class": "fish",
+    "extraTooltipInfo": "S h r i m p",
     "time": 10000,
     "tags": ["ingredient", "cooking", "fishing"]
   },
@@ -156,6 +157,7 @@
     "isFish": true,
     "itemImage": "/images/fishing/raw_anchovy.png",
     "class": "fish",
+    "extraTooltipInfo": "In what scape would these look like blue shrimp?",
     "time": 10000,
     "tags": ["ingredient", "cooking", "fishing"]
   },
@@ -170,6 +172,7 @@
     "isFish": true,
     "itemImage": "/images/fishing/raw_trout.png",
     "class": "fish",
+    "extraTooltipInfo": "The fisherman's participation award.",
     "time": 10000,
     "tags": ["ingredient", "cooking", "fishing"]
   },
@@ -184,6 +187,7 @@
     "isFish": true,
     "itemImage": "/images/fishing/raw_salmon.png",
     "class": "fish",
+    "extraTooltipInfo": "Not going up any rivers anymore.",
     "time": 10000,
     "tags": ["ingredient", "cooking", "fishing"]
   },
@@ -198,6 +202,7 @@
     "isFish": true,
     "itemImage": "/images/fishing/raw_lobster.png",
     "class": "fish",
+    "extraTooltipInfo": "Raw Lobster!",
     "time": 10000,
     "tags": ["ingredient", "cooking", "fishing"]
   },
@@ -212,6 +217,7 @@
     "isFish": true,
     "itemImage": "/images/fishing/raw_tuna.png",
     "class": "fish",
+    "extraTooltipInfo": "Tuna Tuna Tuna",
     "time": 10000,
     "tags": ["ingredient", "cooking", "fishing"]
   },
@@ -222,10 +228,10 @@
     "value": 125,
     "tradeable": true,
     "experience": 125,
-    "isIngredient": true,
     "isFish": true,
     "itemImage": "/images/fishing/raw_shark.png",
     "class": "fish",
+    "extraTooltipInfo": "A big toothy fish. It's a fish, right?",
     "time": 10000,
     "tags": ["ingredient", "cooking", "fishing"]
   },
@@ -1428,6 +1434,7 @@
     "name": "Air Talisman",
     "talisman": true,
     "tradeable": true,
+    "value": 20000,
     "itemImage": "/images/runecrafting/air_talisman.png",
     "extraTooltipInfo": "A magical talisman that can be consumed to strengthen your link to air magic.",
     "class": "rune",
@@ -1438,6 +1445,7 @@
     "name": "Earth Talisman",
     "talisman": true,
     "tradeable": true,
+    "value": 20000,
     "itemImage": "/images/runecrafting/earth_talisman.png",
     "extraTooltipInfo": "A magical talisman that can be consumed to strengthen your link to earth magic.",
     "class": "rune",
@@ -1448,6 +1456,7 @@
     "name": "Fire Talisman",
     "talisman": true,
     "tradeable": true,
+    "value": 20000,
     "itemImage": "/images/runecrafting/fire_talisman.png",
     "extraTooltipInfo": "A magical talisman that can be consumed to strengthen your link to fire magic.",
     "class": "rune",
@@ -1458,6 +1467,7 @@
     "name": "Water Talisman",
     "talisman": true,
     "tradeable": true,
+    "value": 20000,
     "itemImage": "/images/runecrafting/water_talisman.png",
     "extraTooltipInfo": "A magical talisman that can be consumed to strengthen your link to water magic.",
     "class": "rune",
@@ -1468,6 +1478,7 @@
     "name": "Blood Talisman",
     "talisman": true,
     "tradeable": true,
+    "value": 20000,
     "itemImage": "/images/runecrafting/blood_talisman.png",
     "extraTooltipInfo": "A magical talisman that can be consumed to strengthen your link to blood magic.",
     "class": "rune",
@@ -1478,6 +1489,7 @@
     "name": "Death Talisman",
     "talisman": true,
     "tradeable": true,
+    "value": 20000,
     "itemImage": "/images/runecrafting/death_talisman.png",
     "extraTooltipInfo": "A magical talisman that can be consumed to strengthen your link to death magic.",
     "class": "rune",
@@ -1488,6 +1500,7 @@
     "name": "Chaos Talisman",
     "talisman": true,
     "tradeable": true,
+    "value": 20000,
     "itemImage": "/images/runecrafting/chaos_talisman.png",
     "extraTooltipInfo": "A magical talisman that can be consumed to strengthen your link to chaos magic.",
     "class": "rune",
@@ -1498,6 +1511,7 @@
     "name": "Nature Talisman",
     "talisman": true,
     "tradeable": true,
+    "value": 20000,
     "itemImage": "/images/runecrafting/nature_talisman.png",
     "extraTooltipInfo": "A magical talisman that can be consumed to strengthen your link to nature magic.",
     "class": "rune",
@@ -1508,6 +1522,7 @@
     "name": "Mind Talisman",
     "talisman": true,
     "tradeable": true,
+    "value": 20000,
     "itemImage": "/images/runecrafting/mind_talisman.png",
     "extraTooltipInfo": "A magical talisman that can be consumed to strengthen your link to mind magic.",
     "class": "rune",
@@ -1518,6 +1533,7 @@
     "name": "Cosmic Talisman",
     "talisman": true,
     "tradeable": true,
+    "value": 20000,
     "itemImage": "/images/runecrafting/cosmic_talisman.png",
     "extraTooltipInfo": "A magical talisman that can be consumed to strengthen your link to cosmic magic.",
     "class": "rune",
@@ -2295,9 +2311,10 @@
     "enchantmentOverrideSlot": "combat-talisman",
     "forcedEnchant": 44,
     "forcedEnchantAmount": 4,
+    "relatedAbility": 27,
     "itemImage": "/images/jewellery/ancient_nature_talisman.png",
     "class": "equipment",
-    "extraTooltipInfo": "An ancient energy keeps you from attempting to absorb the talisman. Ability: 'Nature's Sanctuary' - Applies 6 stacks of Reinforcement 1 with a cooldown of at least 60 seconds if the original enchantment is in use.",
+    "extraTooltipInfo": "An ancient energy keeps you from attempting to absorb the talisman.",
     "augmentationStats": [
       { "description": "Defense (Stab):", "value": 1 },
       { "description": "Defense (Slash):", "value": 1 },
@@ -2328,9 +2345,10 @@
     "enchantmentOverrideSlot": "combat-talisman",
     "forcedEnchant": 45,
     "forcedEnchantAmount": 1,
+    "relatedAbility": 31,
     "itemImage": "/images/jewellery/ancient_fire_talisman.png",
     "class": "equipment",
-    "extraTooltipInfo": "An ancient energy keeps you from attempting to absorb the talisman. With this you could wield an aspect of flame. Ability: 'Fire Ball' - A fire attack that is 10% slower, 10% more accurate, and does 50% more damage with a cooldown of at least 45 seconds. ABILITY DOES NOT STACK WITH FIRE ORB.",
+    "extraTooltipInfo": "An ancient energy keeps you from attempting to absorb the talisman. With this you could wield an aspect of flame.",
     "augmentationStats": [
       { "description": "Strength (Melee):", "value": 0.5 },
       { "description": "Attack (Accuracy):", "value": 1 }
@@ -2546,12 +2564,13 @@
     "name": "Fish Oil",
     "value": 50,
     "tradeable": true,
+    "isIngredient": true,
     "itemImage": "/images/cooking/fish_oil.png",
-    "extraTooltipInfo": "Ew, slimy. Should make logs burn longer though.",
+    "extraTooltipInfo": "Ew, slimy. Should make logs burn longer or make cooking faster, though!",
     "level": "rare",
     "description": "Oil from cooking fish.",
     "class": "cookedFish",
-    "tags": ["misc"]
+    "tags": ["misc", "cooking", "ingredient"]
   },
   "702": {
     "id": 702,
@@ -7371,7 +7390,7 @@
     "augmentationCost": { "112": 1000 },
     "craftingLevel": 1,
     "craftingExperience": 1,
-    "value": 0,
+    "value": 42069,
     "tradeable": true,
     "requiredLevel": {
       "constitution": 1,
@@ -7426,7 +7445,7 @@
     "augmentationCost": { "112": 1000 },
     "craftingLevel": 1,
     "craftingExperience": 1,
-    "value": 0,
+    "value": 42069,
     "tradeable": true,
     "requiredLevel": {
       "constitution": 1,
@@ -7481,7 +7500,7 @@
     "augmentationCost": { "112": 1000 },
     "craftingLevel": 1,
     "craftingExperience": 1,
-    "value": 0,
+    "value": 42069,
     "tradeable": true,
     "requiredLevel": {
       "constitution": 1,
@@ -7715,6 +7734,7 @@
       "strength": 85,
       "defense": 1
     },
+    "relatedAbility": 18,
     "criticalBonus": { "criticalChance": 0, "criticalMultiplier": 1.25 },
     "styleAccuracyBonus": { "melee": 0, "range": 0, "magic": 0 },
     "armorBonus": { "protection": 0, "resistance": 0, "agility": 0 },
@@ -7734,7 +7754,7 @@
     },
     "itemImage": "/images/combat/equipment/moss_maul.png",
     "itemIcon": "/images/combat/equipment/moss_maul_icon.png",
-    "extraTooltipInfo": "A hulking mass of moss covered material; requires a giant's strength to wield properly! Ability: 'BONK' - An attack that is 5% slower and does 10% more damage.",
+    "extraTooltipInfo": "A hulking mass of moss covered material; requires a giant's strength to wield properly!",
     "class": "equipment",
     "visual": "moss-maul",
     "category": ["weapon", "combat"],
@@ -7750,8 +7770,9 @@
     "slot": "weapon",
     "enchantmentTier": 6,
     "augmentationCost": { "513": 50, "701": 20 },
-    "value": 100,
+    "value": 2120000,
     "tradeable": true,
+    "relatedAbility": 25,
     "style": "slash",
     "oneHanded": false,
     "defenseBonus": {
@@ -7789,7 +7810,7 @@
     },
     "itemImage": "/images/combat/equipment/modified_diving_gloves.png",
     "itemIcon": "/images/combat/equipment/modified_diving_gloves_icon.png",
-    "extraTooltipInfo": "Ready to punch anything you might encounter underwater or above! Ability: 'The Ol' One-Two' - Two attacks that are 66% faster, does 25% less damage, and is 10% less accurate.",
+    "extraTooltipInfo": "Ready to punch anything you might encounter underwater or above!",
     "class": "equipment",
     "visual": "modified-diving-gloves",
     "category": ["weapon", "combat"],
@@ -7822,6 +7843,7 @@
     },
     "attackBonus": { "accuracy": 0 },
     "strengthBonus": { "melee": 5, "range": 5, "magic": 5 },
+    "relatedAbility": 29,
     "criticalBonus": { "criticalChance": 0, "criticalMultiplier": 1.25 },
     "styleAccuracyBonus": { "melee": 0, "range": 0, "magic": 0 },
     "armorBonus": { "protection": 0, "resistance": 0, "agility": 0 },
@@ -7840,7 +7862,7 @@
       "dark": 0
     },
     "itemImage": "/images/combat/equipment/kings_crown.png",
-    "extraTooltipInfo": "The crown of a Valley's true forever king. Ability: 'Regal Might' - Applies 1 stack of Protection 5 with a cooldown of at least 60 seconds.",
+    "extraTooltipInfo": "The crown of a Valley's true forever king.",
     "class": "equipment",
     "visual": "kings-crown",
     "category": ["armor", "combat"],
@@ -7861,6 +7883,7 @@
     "augmentationCost": { "402": 4, "512": 100 },
     "value": 6360000,
     "tradeable": true,
+    "relatedAbility": 31,
     "requiredLevel": {
       "constitution": 1,
       "attack": 85,
@@ -7894,7 +7917,7 @@
       "dark": 0
     },
     "itemImage": "/images/combat/equipment/fire_orb.png",
-    "extraTooltipInfo": "This orb of living flame sharpens the senses to an inhuman degree. Ability: 'Fire Ball' - A fire attack that is 10% slower, 10% more accurate, and does 50% more damage with a cooldown of at least 45 seconds. ABILITY DOES NOT STACK WITH ANCIENT FIRE AMULET.",
+    "extraTooltipInfo": "This orb of living flame sharpens the senses to an inhuman degree.",
     "class": "equipment",
     "visual": "fire-orb",
     "category": ["armor", "combat"],
@@ -7922,6 +7945,7 @@
     "craftingExperience": 148200,
     "value": 6360000,
     "tradeable": true,
+    "relatedAbility": 19,
     "style": "slash",
     "oneHanded": true,
     "defenseBonus": {
@@ -7961,8 +7985,8 @@
     "itemIcon": "/images/combat/equipment/shard_of_kalanahmatti_icon.png",
     "class": "equipment",
     "visual": "shard-of-kalanahmatti",
-    "craftingDescription": "Powerful weapon made out of the legendary spear 'Kalanahmatti'. Ability: 'Jäänuoli' - An ice attack that is 10% faster and 5% less accurate. Requires Attack level of 85 to wield.",
-    "extraTooltipInfo": "This powerful blade is fashioned from a shard of the legendary spear 'Kalanahmatti.' Ability: 'Jäänuoli' - An ice attack that is 10% faster and 5% less accurate.",
+    "craftingDescription": "Powerful weapon made out of the legendary spear 'Kalanahmatti'.",
+    "extraTooltipInfo": "This powerful blade is fashioned from a shard of the legendary spear 'Kalanahmatti.'",
     "category": "Rare",
     "augmentationStats": [
       { "description": "Attack (Accuracy):", "value": 5 },
@@ -7978,6 +8002,7 @@
     "augmentationCost": { "206": 50 },
     "value": 3360000,
     "tradeable": true,
+    "relatedAbility": 22,
     "style": "slash",
     "oneHanded": true,
     "defenseBonus": {
@@ -8015,8 +8040,10 @@
     },
     "itemImage": "/images/combat/equipment/zero_edge.png",
     "itemIcon": "/images/combat/equipment/zero_edge_icon.png",
+    "itemSet": ["zero edge"],
+    "itemSetDescription": "Aspect of Lightning - Converts auto attack element to lightning.",
     "class": "equipment",
-    "extraTooltipInfo": "Lightning never strikes twice, so surely this is an anomaly. Ability: 'Lightning Strikes Twice' - Two lightning attacks that are 40% faster, deal 33% less damage, and is 15% less accurate.",
+    "extraTooltipInfo": "Lightning never strikes twice, so surely this is an anomaly.",
     "visual": "zero",
     "category": ["weapon", "combat"],
     "augmentationStats": [
@@ -8051,6 +8078,7 @@
     },
     "attackBonus": { "accuracy": 0 },
     "strengthBonus": { "melee": 0, "range": 0, "magic": 0 },
+    "relatedAbility": 28,
     "criticalBonus": { "criticalChance": 0, "criticalMultiplier": 1.25 },
     "styleAccuracyBonus": { "melee": 0, "range": 0, "magic": 0 },
     "armorBonus": { "protection": 0, "resistance": 0, "agility": 0 },
@@ -8070,7 +8098,7 @@
     },
     "itemImage": "/images/combat/equipment/crest_of_chaos.png",
     "itemIcon": "/images/combat/equipment/crest_of_chaos_icon.png",
-    "extraTooltipInfo": "The heat of this helm could empower your smithing abilities! Ability: 'Krakatoa' - A fire attack that is 25% slower, 25% more accurate, and does double damage with a cooldown of at least 45 seconds.",
+    "extraTooltipInfo": "The heat of this helm could empower your smithing abilities!",
     "class": "equipment",
     "visual": "crest-of-chaos",
     "category": ["armor", "combat"],
@@ -8085,6 +8113,7 @@
     "augmentationCost": { "515": 100, "800": 50 },
     "value": 3360000,
     "tradeable": true,
+    "relatedAbility": 23,
     "style": "crush",
     "oneHanded": true,
     "defenseBonus": {
@@ -8122,7 +8151,7 @@
     },
     "itemImage": "/images/combat/equipment/forgotten-soul-axe.png",
     "itemIcon": "/images/combat/equipment/forgotten-soul-sad-icon.png",
-    "extraTooltipInfo": "Long forgotten in the waves. Ability: 'Soul Steal' - A poison attack that is 50% more accurate and does 25% less damage with a 15% chance to heal the player for 1/6 of the damage dealt.",
+    "extraTooltipInfo": "Long forgotten in the waves.",
     "class": "equipment",
     "visual": "forgotten-soul-axe",
     "category": ["weapon", "combat"],
@@ -8140,6 +8169,7 @@
     "augmentationCost": { "515": 100, "800": 50 },
     "value": 3360000,
     "tradeable": true,
+    "relatedAbility": 23,
     "style": "slash",
     "oneHanded": true,
     "defenseBonus": {
@@ -8177,7 +8207,7 @@
     },
     "itemImage": "/images/combat/equipment/forgotten-soul-scimitar.png",
     "itemIcon": "/images/combat/equipment/forgotten-soul-crazy-icon.png",
-    "extraTooltipInfo": "Driven mad by its endless drifting. Ability: 'Soul Steal' - A poison attack that is 50% more accurate and does 25% less damage with a 15% chance to heal the player for 1/6 of the damage dealt.",
+    "extraTooltipInfo": "Driven mad by its endless drifting.",
     "class": "equipment",
     "visual": "forgotten-soul-scim",
     "category": ["weapon", "combat"],
@@ -8195,6 +8225,7 @@
     "augmentationCost": { "515": 100, "800": 50 },
     "value": 3360000,
     "tradeable": true,
+    "relatedAbility": 23,
     "style": "slash",
     "oneHanded": false,
     "defenseBonus": {
@@ -8233,7 +8264,7 @@
     "itemImage": "/images/combat/equipment/forgotten-soul-two-handed.png",
     "itemIcon": "/images/combat/equipment/forgotten-soul-mad-icon.png",
     "class": "equipment",
-    "extraTooltipInfo": "Perhaps forgotten, absolutely enraged. Ability: 'Soul Steal' - A poison attack that is 50% more accurate and does 25% less damage with a 15% chance to heal the player for 1/6 of the damage dealt.",
+    "extraTooltipInfo": "Perhaps forgotten, absolutely enraged.",
     "visual": "forgotten-soul-two",
     "category": ["weapon", "combat"],
     "augmentationStats": [
@@ -8698,6 +8729,7 @@
     "augmentationCost": { "112": 100, "207": 50, "512": 100 },
     "value": 420000,
     "tradeable": true,
+    "relatedAbility": 20,
     "style": "stab",
     "oneHanded": false,
     "defenseBonus": {
@@ -8735,7 +8767,7 @@
     },
     "itemImage": "/images/combat/equipment/infernal_lance.png",
     "itemIcon": "/images/combat/equipment/infernal_lance_icon.png",
-    "extraTooltipInfo": "A legendary weapon of great prestige and power. Ability: 'Infernal Judgement' - A fire attack that is 20% faster, does 35% more damage, and is 50% more accurate.",
+    "extraTooltipInfo": "A legendary weapon of great prestige and power.",
     "class": "equipment",
     "visual": "spear",
     "augmentationStats": [
@@ -8751,6 +8783,7 @@
     "enchantmentTier": 0,
     "tradeable": true,
     "augmentationCost": { "202": 60, "204": 60 },
+    "value": 192000,
     "defenseBonus": {
       "stab": 30,
       "slash": 30,
@@ -8857,6 +8890,7 @@
     "slot": "cape",
     "enchantmentTier": 0,
     "augmentationCost": { "515": 500, "800": 50 },
+    "value": 2560000,
     "tradeable": true,
     "defenseBonus": {
       "stab": 20,
@@ -9118,7 +9152,9 @@
     },
     "itemImage": "/images/combat/equipment/shrimp_armor.png",
     "itemIcon": "/images/combat/equipment/shrimp_armor_icon.png",
-    "extraTooltipInfo": "The chitinous shell of the Aberrant Shrimp formed into armor; it's tainted by some sort of demonic magic. Is this a blessing or a curse? Item Set: 'Shrimp' - 3 pieces grants 2 passive Demon Skin, 4 pieces grants 4 passive Demon Skin.",
+    "itemSet": ["shrimp"],
+    "itemSetDescription": "Shrimp - 3 pieces grants 2 passive Demon Skin, 4 pieces grants 4 passive Demon Skin.",
+    "extraTooltipInfo": "The chitinous shell of the Aberrant Shrimp formed into armor; it's tainted by some sort of demonic magic. Is this a blessing or a curse?",
     "class": "equipment",
     "visual": "shrimp-armor",
     "augmentationStats": [
@@ -9171,7 +9207,9 @@
       "dark": 0
     },
     "itemImage": "/images/combat/equipment/shrimp_pants.png",
-    "extraTooltipInfo": "The chitinous shell of the Aberrant Shrimp formed into greaves; it's tainted by some sort of demonic magic. Is this a blessing or a curse? Item Set: 'Shrimp' - 3 pieces grants 2 passive Demon Skin, 4 pieces grants 4 passive Demon Skin.",
+    "itemSet": ["shrimp"],
+    "itemSetDescription": "Shrimp - 3 pieces grants 2 passive Demon Skin, 4 pieces grants 4 passive Demon Skin.",
+    "extraTooltipInfo": "The chitinous shell of the Aberrant Shrimp formed into greaves; it's tainted by some sort of demonic magic. Is this a blessing or a curse?",
     "class": "equipment",
     "visual": "shrimp-legs",
     "augmentationStats": [
@@ -9225,7 +9263,9 @@
     },
     "itemImage": "/images/combat/equipment/shrimp_helm.png",
     "itemIcon": "/images/combat/equipment/shrimp_helm_icon.png",
-    "extraTooltipInfo": "The chitinous shell of the Aberrant Shrimp formed into a helmet; it's tainted by some sort of demonic magic. Is this a blessing or a curse? Item Set: 'Shrimp' - 3 pieces grants 2 passive Demon Skin, 4 pieces grants 4 passive Demon Skin.",
+    "itemSet": ["shrimp"],
+    "itemSetDescription": "Shrimp - 3 pieces grants 2 passive Demon Skin, 4 pieces grants 4 passive Demon Skin.",
+    "extraTooltipInfo": "The chitinous shell of the Aberrant Shrimp formed into a helmet; it's tainted by some sort of demonic magic. Is this a blessing or a curse?",
     "class": "equipment",
     "visual": "shrimp-helm",
     "augmentationStats": [
@@ -9279,7 +9319,9 @@
     },
     "itemImage": "/images/combat/equipment/shrimp_shield.png",
     "itemIcon": "/images/combat/equipment/shrimp_shield_icon.png",
-    "extraTooltipInfo": "The chitinous shell of the Aberrant Shrimp formed into a shield; it's tainted by some sort of demonic magic. Is this a blessing or a curse? Item Set: 'Shrimp' - 3 pieces grants 2 passive Demon Skin, 4 pieces grants 4 passive Demon Skin.",
+    "itemSet": ["shrimp"],
+    "itemSetDescription": "Shrimp - 3 pieces grants 2 passive Demon Skin, 4 pieces grants 4 passive Demon Skin.",
+    "extraTooltipInfo": "The chitinous shell of the Aberrant Shrimp formed into a shield; it's tainted by some sort of demonic magic. Is this a blessing or a curse?",
     "class": "equipment",
     "visual": "shrimp-shield",
     "augmentationStats": [
@@ -9361,6 +9403,7 @@
     },
     "price": 30000000,
     "value": 5000000,
+    "relatedAbility": 30,
     "defenseBonus": {
       "stab": 18,
       "slash": 18,
@@ -9371,7 +9414,7 @@
     "attackBonus": { "accuracy": 36 },
     "strengthBonus": { "melee": 18, "range": 0, "magic": 0 },
     "itemImage": "/images/combat/equipment/awakened_world_shaper.png",
-    "extraTooltipInfo": "You feel as if infinite power lies within your grasp. Ability: '*Snap*' - An attack that is 5% faster, does 5% more damage, is 5% more accurate, and replaces the first auto-attack in a rotation.",
+    "extraTooltipInfo": "You feel as if infinite power lies within your grasp.",
     "class": "equipment",
     "visual": "awakened-titanic-gauntlet gloves",
     "augmentationStats": [
@@ -9393,6 +9436,7 @@
     "augmentationCost": { "1548": 1, "1549": 40 },
     "value": 12000000,
     "tradeable": true,
+    "relatedAbility": 33,
     "style": "slash",
     "oneHanded": false,
     "defenseBonus": {
@@ -9431,7 +9475,7 @@
     "itemImage": "/images/combat/equipment/Shapeless_Scythe.png",
     "itemIcon": "/images/combat/equipment/Shapeless_Scythe_Icon.png",
     "class": "equipment",
-    "extraTooltipInfo": "Its vorpal edge seems to shimmer and distort as you examine it. Ability: 'Chaos Rend' - A chaos attack that is 5% slower, does 15% more damage, and is 5% less accurate.",
+    "extraTooltipInfo": "Its vorpal edge seems to shimmer and distort as you examine it.",
     "visual": "scythe",
     "augmentationStats": [
       { "description": "Attack (Accuracy):", "value": 9 },
@@ -9562,6 +9606,7 @@
     },
     "value": 6360000,
     "tradeable": true,
+    "relatedAbility": 21,
     "style": "crush",
     "oneHanded": true,
     "defenseBonus": {
@@ -9599,7 +9644,7 @@
     },
     "itemImage": "/images/combat/equipment/crystal_mace.png",
     "itemIcon": "/images/combat/equipment/crystal_mace_icon.png",
-    "extraTooltipInfo": "A manifested shard of chaos. If only you knew how to utilize it's energy to perform magic! Ability: 'Shatter Strike' - An attack that is 5% slower, does 30% more damage, and is 10% more accurate.",
+    "extraTooltipInfo": "A manifested shard of chaos. If only you knew how to utilize it's energy to perform magic!",
     "class": "equipment",
     "visual": "crystal-mace",
     "category": ["weapon", "combat"],
@@ -9636,9 +9681,10 @@
       "range": 0
     },
     "strengthBonus": { "melee": 5, "range": 0, "magic": 5 },
+    "relatedAbility": 26,
     "itemImage": "/images/jewellery/signet_ring.png",
     "class": "equipment",
-    "extraTooltipInfo": "Carries the signature of some unknown entity. Ability: 'Entropic Burst' - A chaos attack that is 50% faster, does half damage, and is 75% more accurate with a cooldown of at least 45 seconds if the original enchantment is in use.",
+    "extraTooltipInfo": "Carries the signature of some unknown entity.",
     "augmentationStats": [
       { "description": "Attack (Accuracy):", "value": 1 },
       { "description": "Strength (Melee):", "value": 1 },
@@ -9648,13 +9694,63 @@
     "tags": ["jewelry", "equipment"]
   },
   "1555": {
-    "name": "essence to talisman resource",
+    "name": "Mantle of Flame",
     "id": 1555,
-    "value": 9,
-    "tradeable": false,
-    "itemImage": "/images/cooking/banana.png",
-    "extraTooltipInfo": "yes",
-    "tags": ["cape"]
+    "slot": "cape",
+    "enchantmentTier": 0,
+    "augmentationCost": { "2": 15000, "512": 2500, "700": 1000, "9013": 1 },
+    "value": 3120000,
+    "tradeable": true,
+    "defenseBonus": {
+      "stab": 10,
+      "slash": 10,
+      "crush": 10,
+      "magic": 20,
+      "range": 5
+    },
+    "attackBonus": { "accuracy": 15 },
+    "strengthBonus": { "melee": 0, "range": 0, "magic": 20 },
+    "requiredLevel": {
+      "constitution": 1,
+      "attack": 1,
+      "strength": 1,
+      "defense": 1
+    },
+    "criticalBonus": { "criticalChance": 0, "criticalMultiplier": 1.25 },
+    "styleAccuracyBonus": { "melee": 0, "range": 0, "magic": 0 },
+    "armorBonus": { "protection": 0, "resistance": 0, "agility": 0 },
+    "damageTypeBonus": {
+      "fire": 0,
+      "ice": 0,
+      "earth": 0,
+      "light": 0,
+      "dark": 0
+    },
+    "armorTypeBonus": {
+      "fire": 0,
+      "ice": 0,
+      "earth": 0,
+      "light": 0,
+      "dark": 0
+    },
+    "itemImage": "/images/combat/equipment/mantle_of_flame.png",
+    "itemIcon": "/images/combat/equipment/mantle_of_flame.png",
+    "itemSet": ["phoenix"],
+    "itemSetDescription": "Phoenix's Flame - Gives a chance that increases with augments for a fatal blow to be rendered non-fatal; if this happens the Resurrection Sickness debuff (reduced healing, offensive, and defensive stats) with stacks equal to the hitpoints will be applied.",
+    "extraTooltipInfo": "Wrap yourself in the cozy flames of a dying star and be reborn.",
+    "class": "equipment",
+    "visual": "cape",
+    "category": ["weapon", "combat"],
+    "augmentationStats": [
+      { "description": "Strength (Melee):", "value": 0.5 },
+      { "description": "Strength (Magic):", "value": 3 },
+      { "description": "Attack (Accuracy):", "value": 1 },
+      { "description": "Defense (Stab):", "value": -3 },
+      { "description": "Defense (Slash):", "value": -3 },
+      { "description": "Defense (Crush):", "value": -3 },
+      { "description": "Defense (Magic):", "value": 2 }
+    ],
+    "tags": ["melee", "armor", "equipment", "unique", "cape", "cloak"]
   },
   "1556": {
     "name": "max account consumable dev",
@@ -9955,10 +10051,17 @@
     "id": 1564,
     "slot": "weapon",
     "enchantmentTier": 6,
-    "augmentationCost": { "5": 15000, "95": 1000, "96": 1000, "402": 4 },
+    "augmentationCost": {
+      "5": 15000,
+      "95": 1000,
+      "96": 100,
+      "402": 1,
+      "403": 1
+    },
     "value": 25000,
     "tradeable": true,
     "enchantmentOverrideSlot": "ladle",
+    "relatedAbility": 32,
     "style": "crush",
     "oneHanded": true,
     "defenseBonus": {
@@ -9995,7 +10098,7 @@
       "dark": 0
     },
     "itemImage": "/images/combat/equipment/searing_ladle.png",
-    "extraTooltipInfo": "Each time it's augmented it just gets hotter! Anything you cook with this is probably more likely to get burnt than anything else! Ability: 'Gordon's Fury' - A fire attack that is 50% faster, 50% less accurate, and does double damage with a cooldown of at least 10 seconds.",
+    "extraTooltipInfo": "Each time it's augmented it just gets hotter! Anything you cook with this is probably more likely to get burnt than anything else!",
     "class": "equipment",
     "visual": "ladle",
     "augmentationStats": [{ "description": "Cooking Skill:", "value": 4 }],
@@ -11344,7 +11447,7 @@
     "skillIcon": "/images/enchanting/enchanting_logo.png",
     "class": "enchanted-scroll",
     "actionButton": "Craft",
-    "extraTooltipInfo": "Adds a 5% chance to try and extract fish oil from a fish based on the fish's size. There is a chance that fish oil may not be created if the fish is too small.",
+    "extraTooltipInfo": "Adds a 7.5% chance to try and extract fish oil from a fish based on the fish's size. There is a chance that fish oil may not be created if the fish is too small.",
     "tags": ["enchanting", "enchant", "tacklebox"]
   },
   "1649": {
@@ -11487,8 +11590,8 @@
       { "2": 100, "305": 15 },
       { "2": 100, "306": 10 }
     ],
-    "craftingDescription": "The remnants of life.",
     "itemImage": "/images/cooking/ashes.png",
+    "craftingDescription": "The remnants of life.",
     "extraTooltipInfo": "The remnants of life.",
     "category": "General",
     "class": "cooking-ingredient",
@@ -12182,6 +12285,24 @@
     "class": "cooking-ingredient",
     "tags": ["cooking", "consumable", "food"]
   },
+  "3000": {
+    "name": "Water Imbued Dust",
+    "id": 3000,
+    "isIngredient": true,
+    "craftingLevel": 70,
+    "healing": 0,
+    "value": 1,
+    "tradeable": true,
+    "requiredResources": { "513": 128, "2014": 12 },
+    "craftingMultiplier": [8],
+    "craftingExperience": 60,
+    "itemImage": "/images/cooking/water_dust.png",
+    "craftingDescription": "Each craft results in 8 dust. Crushed up water rune. Not exactly a delicacy, but it might have some sort of effect when cooked.",
+    "extraTooltipInfo": "Crushed up water rune. Not exactly a delicacy, but it might have some sort of effect when cooked.",
+    "category": "Dungeon",
+    "class": "cooking-ingredient",
+    "tags": ["cooking", "ingredient"]
+  },
   "5000": {
     "name": "Shrimp Bauble",
     "id": 5000,
@@ -12285,12 +12406,8 @@
     "name": "Wrapping Paper",
     "tradeable": false,
     "itemImage": "/images/christmas/wrapping_paper.png",
-    "requiredResources": { "7011": 10, "7038": 200 },
-    "craftingLevel": 1,
-    "craftingExperience": 30,
     "extraTooltipInfo": "Born to be torn apart",
     "class": "christmas-drop",
-    "category": "Christmas",
     "tags": ["christmas", "misc"]
   },
   "7003": {
@@ -12310,12 +12427,8 @@
     "level": 1,
     "experience": 1,
     "isIngredient": true,
-    "craftingLevel": 1,
-    "craftingExperience": 1,
-    "requiredResources": { "2015": 1, "2017": 1, "2018": 1, "2019": 1 },
     "itemImage": "/images/christmas/cookie_dough.png",
     "extraTooltipInfo": "It smells like cookies",
-    "category": "Christmas",
     "class": "christmas-food",
     "time": 1000,
     "tags": ["christmas", "cooking", "ingredient", "consumable", "food"]
@@ -12763,6 +12876,7 @@
     "slot": "shield",
     "enchantmentTier": 5,
     "augmentationCost": { "519": 500 },
+    "value": 2840000,
     "tradeable": true,
     "requiredLevel": {
       "constitution": 1,
@@ -12813,6 +12927,7 @@
     "slot": "weapon",
     "enchantmentTier": 5,
     "augmentationCost": { "2015": 100 },
+    "value": 2840000,
     "tradeable": true,
     "style": "stab",
     "oneHanded": false,
@@ -12869,6 +12984,7 @@
     "slot": "cape",
     "enchantmentTier": 0,
     "augmentationCost": { "2015": 100 },
+    "value": 5120000,
     "tradeable": true,
     "defenseBonus": {
       "stab": 20,
@@ -12939,7 +13055,8 @@
     },
     "itemImage": "/images/christmas/christmas_gloves.png",
     "itemSet": ["jolly"],
-    "extraTooltipInfo": "A pair of mittens to keep you warm in the bitter cold! Wait, are they fingerless? Item Set: 'Jolly' - Wearing both the Merry Maker's Mittens and Mistletoe Treads grants the Jolly buff, enabling combat in Krampus' Lair.",
+    "itemSetDescription": "Jolly - Wearing both the Merry Maker's Mittens and Mistletoe Treads grants the Jolly buff, enabling combat in Krampus' Lair.",
+    "extraTooltipInfo": "A pair of mittens to keep you warm in the bitter cold! Wait, are they fingerless?",
     "class": "equipment",
     "visual": "gloves",
     "augmentationStats": [],
@@ -12967,7 +13084,8 @@
     "itemImage": "/images/christmas/christmas_boots.png",
     "itemIcon": "/images/christmas/christmas_boots_icon.png",
     "itemSet": ["jolly"],
-    "extraTooltipInfo": "For treading on snow or enemy faces. Item Set: 'Jolly' - Wearing both the Merry Maker's Mittens and Mistletoe Treads grants the Jolly buff, enabling combat in Krampus' Lair.",
+    "itemSetDescription": "Jolly - Wearing both the Merry Maker's Mittens and Mistletoe Treads grants the Jolly buff, enabling combat in Krampus' Lair.",
+    "extraTooltipInfo": "For treading on snow or enemy faces.",
     "class": "equipment",
     "visual": "boots",
     "tags": ["christmas", "equipment", "boots"]
@@ -13000,6 +13118,7 @@
     "name": "Scroll of Candy Canes",
     "activeMessage": "Making Scrolls of Candy Canes",
     "enchant": true,
+    "hidden": true,
     "categories": ["christmas elf gear"],
     "time": 60000,
     "id": 7036,
@@ -13024,17 +13143,12 @@
   "7037": {
     "id": 7037,
     "name": "Gummy Lure",
-    "craftingLevel": 1,
-    "craftingExperience": 15,
     "isFishingBait": true,
-    "requiredResources": { "7006": 1 },
-    "craftingMultiplier": [2],
     "itemImage": "images/christmas/gummy_bait.png",
     "craftingDescription": "Each craft results in 2 bait. Helps with Christmas zone fishing.",
     "extraTooltipInfo": "A gummy fish turned into a lure. Helps with Christmas zone fishin.",
     "class": "fish",
-    "tags": ["bait", "fishing"],
-    "category": "Christmas"
+    "tags": ["bait", "fishing"]
   },
   "7038": {
     "id": 7038,
@@ -13159,7 +13273,7 @@
     "enchantmentTier": 0,
     "itemImage": "/images/misc/Elite_Scroll.png",
     "extraTooltipInfo": "Ancient power emanates from the seal... It sorta smells like durian. Includes built-in double drops for all players and +20 Treasure Hunter.",
-    "class": "gem",
+    "class": "elite-scroll",
     "tags": ["scroll", "champion", "elite", "challenge"]
   },
   "8001": {
@@ -13174,7 +13288,7 @@
     "augmentationCost": { "8001": 1 },
     "itemImage": "/images/misc/elite/Elite_Scroll_BK.png",
     "extraTooltipInfo": "A dark scroll for a darker trial. Will you face it and reap the rewards?",
-    "class": "gem",
+    "class": "elite-scroll",
     "augmentationStats": [
       { "description": "Encounters:", "value": 2 },
       { "description": "Treasure Hunter:", "value": 1 },
@@ -13195,7 +13309,7 @@
     "augmentationCost": { "8002": 1 },
     "itemImage": "/images/misc/elite/Elite_Scroll_Giant.png",
     "extraTooltipInfo": "A gargantuan task for only the mightiest of heroes; are you counted amongst them?",
-    "class": "gem",
+    "class": "elite-scroll",
     "augmentationStats": [
       { "description": "Encounters:", "value": 2 },
       { "description": "Treasure Hunter:", "value": 1 },
@@ -13216,7 +13330,7 @@
     "augmentationCost": { "8003": 1 },
     "itemImage": "/images/misc/elite/Elite_Scroll_Corroded.png",
     "extraTooltipInfo": "The stench of decay hangs heavy about this squalid parchment. Are you ready to break the seal?",
-    "class": "gem",
+    "class": "elite-scroll",
     "augmentationStats": [
       { "description": "Encounters:", "value": 2 },
       { "description": "Treasure Hunter:", "value": 1 },
@@ -13237,7 +13351,7 @@
     "augmentationCost": { "8004": 1 },
     "itemImage": "/images/misc/elite/Elite_Scroll_Goblin.png",
     "extraTooltipInfo": "A repulsive taunt from a repulsive creature. Will you break the seal?",
-    "class": "gem",
+    "class": "elite-scroll",
     "augmentationStats": [
       { "description": "Encounters:", "value": 2 },
       { "description": "Treasure Hunter:", "value": 1 },
@@ -13258,7 +13372,7 @@
     "augmentationCost": { "8005": 1 },
     "itemImage": "/images/misc/elite/Elite_Scroll_Chicken.png",
     "extraTooltipInfo": "The secret location of Ot_to's prized hen house. Want to find out what's inside?",
-    "class": "gem",
+    "class": "elite-scroll",
     "augmentationStats": [
       { "description": "Encounters:", "value": 2 },
       { "description": "Treasure Hunter:", "value": 1 },
@@ -13279,7 +13393,7 @@
     "augmentationCost": { "8006": 1 },
     "itemImage": "/images/misc/elite/Elite_Scroll_Demon.png",
     "extraTooltipInfo": "Unknown markings surround the stately seal binding this scroll closed. Are you sure you want to break the seal?",
-    "class": "gem",
+    "class": "elite-scroll",
     "augmentationStats": [
       { "description": "Encounters:", "value": 2 },
       { "description": "Treasure Hunter:", "value": 1 },
@@ -13300,7 +13414,7 @@
     "augmentationCost": { "8007": 1 },
     "itemImage": "/images/misc/elite/Elite_Scroll_Spriggan.png",
     "extraTooltipInfo": "The parchment feels alive in your hands. Will you be able to conquer nature?",
-    "class": "gem",
+    "class": "elite-scroll",
     "augmentationStats": [
       { "description": "Encounters:", "value": 2 },
       { "description": "Treasure Hunter:", "value": 1 },
@@ -13321,7 +13435,7 @@
     "augmentationCost": { "8008": 1 },
     "itemImage": "/images/misc/Elite_Scroll.png",
     "extraTooltipInfo": "Can you do what no one has ever done before?",
-    "class": "gem",
+    "class": "elite-scroll",
     "augmentationStats": [
       { "description": "Encounters:", "value": 2 },
       { "description": "Treasure Hunter:", "value": 1 },
@@ -13342,7 +13456,7 @@
     "augmentationCost": { "8009": 1 },
     "itemImage": "/images/misc/elite/Elite_Scroll_Chaos.png",
     "extraTooltipInfo": "The scroll appears to be shifting in and out of reality. Do you dare unravel its secrets?",
-    "class": "gem",
+    "class": "elite-scroll",
     "augmentationStats": [
       { "description": "Encounters:", "value": 2 },
       { "description": "Treasure Hunter:", "value": 1 },
@@ -13363,7 +13477,7 @@
     "augmentationCost": { "8010": 1 },
     "itemImage": "/images/misc/elite/Elite_Scroll_Fish.png",
     "extraTooltipInfo": "It's soaking wet but the parchment seems untearable. Will you dive in?",
-    "class": "gem",
+    "class": "elite-scroll",
     "augmentationStats": [
       { "description": "Encounters:", "value": 2 },
       { "description": "Treasure Hunter:", "value": 1 },
@@ -13407,7 +13521,8 @@
     "craftingLevel": 85,
     "craftingExperience": 120000,
     "itemImage": "/images/misc/keys/Complete_Disc.png",
-    "category": "Rare",
+    "category": "Dungeon",
+    "craftingDescription": "Grants one-time access to the Giant's Keep dungeon. This is a 5 person encounter.",
     "extraTooltipInfo": "The key to enter the Giant's Keep made of the various elemental fragments. Only five people could make it to the Keep without being spotted.",
     "class": "key",
     "augmentationStats": [
@@ -13423,54 +13538,58 @@
     "name": "Nature Fragment",
     "value": 1500000,
     "tradeable": true,
+    "keyFragment": true,
     "craftable": true,
     "requiredResources": { "517": 500, "9003": 1 },
     "craftingLevel": 85,
     "craftingExperience": 0,
     "itemImage": "/images/misc/keys/Nature_Piece.png",
     "extraTooltipInfo": "A piece of living earth is imbued into this fragment.",
-    "class": "gem",
+    "class": "key",
     "tags": ["key", "fragment"],
-    "category": "Rare"
+    "category": "Dungeon"
   },
   "9002": {
     "id": 9002,
     "name": "Ice Fragment",
     "value": 1500000,
     "tradeable": true,
+    "keyFragment": true,
     "craftable": true,
     "requiredResources": { "513": 500, "9001": 1 },
     "craftingLevel": 85,
     "craftingExperience": 0,
     "itemImage": "/images/misc/keys/Water_Piece.png",
     "extraTooltipInfo": "An unmelting shard of ice is imbued into this fragment.",
-    "class": "gem",
+    "class": "key",
     "tags": ["key", "fragment"],
-    "category": "Rare"
+    "category": "Dungeon"
   },
   "9003": {
     "id": 9003,
     "name": "Fire Fragment",
     "value": 1500000,
     "tradeable": true,
+    "keyFragment": true,
     "craftable": true,
     "requiredResources": { "512": 500, "9002": 1 },
     "craftingLevel": 85,
     "craftingExperience": 0,
     "itemImage": "/images/misc/keys/Fire_Piece.png",
     "extraTooltipInfo": "An unfaltering gout of flames is imbued into this fragment.",
-    "class": "gem",
+    "class": "key",
     "tags": ["key", "fragment"],
-    "category": "Rare"
+    "category": "Dungeon"
   },
   "9004": {
     "id": 9004,
     "name": "Corrupted Fragment",
     "value": 1500000,
     "tradeable": true,
+    "keyFragment": true,
     "itemImage": "/images/misc/keys/Death_Piece.png",
     "extraTooltipInfo": "A rotten slab of decay is imbued into this fragment.",
-    "class": "gem",
+    "class": "key",
     "tags": ["key", "fragment"]
   },
   "9005": {
@@ -13478,9 +13597,10 @@
     "name": "Chaos Fragment",
     "value": 1500000,
     "tradeable": true,
+    "keyFragment": true,
     "itemImage": "/images/misc/keys/Chaos_Piece.png",
     "extraTooltipInfo": "An undescribable phenomenon is imbued into this fragment.",
-    "class": "gem",
+    "class": "key",
     "tags": ["key", "fragment"]
   },
   "9006": {
@@ -13498,7 +13618,8 @@
     "craftingLevel": 30,
     "craftingExperience": 12000,
     "itemImage": "/images/misc/keys/goblin_map.png",
-    "category": "Rare",
+    "category": "Dungeon",
+    "craftingDescription": "Grants one-time access to the Goblin Settlement dungeon. This is a trio encounter.",
     "extraTooltipInfo": "A map to find an elusive goblin settlement. You could probably only bring up to three people to this location safely.",
     "class": "key",
     "augmentationStats": [
@@ -13515,8 +13636,9 @@
     "value": 7500,
     "tradeable": true,
     "itemImage": "/images/misc/keys/goblin_map_piece.png",
+    "keyFragment": true,
     "extraTooltipInfo": "A scrap of parchment that appears to be a part of a map.",
-    "class": "gem",
+    "class": "key",
     "tags": ["key", "fragment"]
   },
   "9008": {
@@ -13541,7 +13663,8 @@
     "craftingLevel": 50,
     "craftingExperience": 24000,
     "itemImage": "/images/misc/keys/fortress_key.png",
-    "category": "Rare",
+    "category": "Dungeon",
+    "craftingDescription": "Grants one-time access to the Dark Fortress dungeon. This is a trio encounter.",
     "extraTooltipInfo": "A brutish key made of dark metal. The way to a fortress is treacherous, no more than three people could make the journey.",
     "class": "key",
     "augmentationStats": [
@@ -13549,7 +13672,7 @@
       { "description": "Elite Stats:", "value": 0.15 },
       { "description": "Loot:", "value": 0.25 }
     ],
-    "tags": ["scroll", "champion", "elite", "challenge"],
+    "tags": ["scroll", "key", "dungeon"],
     "needResource": false
   },
   "9009": {
@@ -13558,9 +13681,10 @@
     "value": 100000,
     "tradeable": true,
     "itemImage": "/images/misc/keys/fortress_key_piece.png",
+    "keyFragment": true,
     "extraTooltipInfo": "A piece of dark metal that looks like part of a key.",
-    "class": "gem",
-    "tags": ["scroll", "champion", "elite", "challenge"]
+    "class": "key",
+    "tags": ["scroll", "key", "dungeon"]
   },
   "9010": {
     "name": "Cursed Spade",
@@ -13583,19 +13707,30 @@
     "isChampScroll": true,
     "isBossToken": true,
     "champEncounter": 704,
+    "enchantmentTier": 0,
+    "maxAugLevel": 10,
+    "augmentationCost": { "5": 10000, "113": 250, "512": 500 },
     "requiredResources": {
-      "5": 25000,
-      "502": 3,
+      "5": 20000,
+      "113": 750,
       "512": 2500,
-      "8006": 3,
-      "9003": 1
+      "700": 1,
+      "9013": 3,
+      "9014": 3
     },
-    "craftingLevel": 65,
-    "craftingExperience": 45000,
+    "craftingLevel": 70,
+    "craftingExperience": 50000,
     "itemImage": "images/misc/keys/flame_feather.png",
-    "extraTooltipInfo": "The feather itself appears to be made out of fire!",
+    "category": "Dungeon",
+    "craftingDescription": "Grants one-time access to the Palace of Flames dungeon. This is a duo encounter.",
+    "extraTooltipInfo": "The feather itself appears to be made out of fire! You could probably lead yourself and one other wherever it's pointing. It just wants to go home, but you'd probably melt in there. Better bring some Flame Resistance food!",
     "class": "key",
-    "tags": ["scroll", "champion", "elite", "challenge"]
+    "augmentationStats": [
+      { "description": "Treasure Hunter:", "value": 4 },
+      { "description": "Elite Stats:", "value": 0.15 },
+      { "description": "Loot:", "value": 0.25 }
+    ],
+    "tags": ["scroll", "key", "dungeon"]
   },
   "9012": {
     "name": "Krampus' Key",
@@ -13615,6 +13750,32 @@
     "class": "key",
     "tags": ["scroll", "champion", "elite", "challenge"],
     "needResource": false
+  },
+  "9013": {
+    "name": "Molten Ashes",
+    "id": 9013,
+    "value": 150000,
+    "tradeable": true,
+    "itemImage": "/images/misc/keys/infernal_ashes.png",
+    "keyFragment": true,
+    "extraTooltipInfo": "The remains of some infernal creature. Still warm to the touch.",
+    "class": "key",
+    "tags": ["scroll", "key", "dungeon"]
+  },
+  "9014": {
+    "name": "Infernal Flame",
+    "id": 9014,
+    "value": 250000,
+    "tradeable": true,
+    "itemImage": "/images/misc/keys/infernal_flame.png",
+    "keyFragment": true,
+    "requiredResources": { "2": 25000, "9013": 2 },
+    "craftingLevel": 70,
+    "craftingExperience": 100,
+    "category": "Dungeon",
+    "extraTooltipInfo": "The vestiges of an infernal soul, left to burn eternally.",
+    "class": "key",
+    "tags": ["scroll", "key", "dungeon"]
   },
   "10000": {
     "id": 10000,
@@ -13895,10 +14056,12 @@
     "gatherSpeed": 100,
     "gatherBonus": 60,
     "itemImage": "/images/fishing/Master_Tacklebox.png",
+    "itemSet": ["fishing set"],
+    "itemSetDescription": "Fisherman - Wearing all pieces replace Master Fisherman with Legendary Angler, which increases all fishing stats by 25%.",
     "tool": true,
     "class": "equipment",
-    "craftingDescription": "The ultimate fishing implement! Gives 40 fishing levels, 100 bait power, 100 reel power, and 60 bonus rarity. Enhances ancient fishing. Item Set: 'Fisherman' - Wearing all pieces replace Master Fisherman with Legendary Angler, which increases all fishing stats by 25%.",
-    "extraTooltipInfo": "The origin of this mythical equipment is lost to history but there is no doubt regarding its power. Enhances ancient fishing. Item Set: 'Fisherman' - Wearing all pieces replace Master Fisherman with Legendary Angler, which increases all fishing stats by 25%.",
+    "craftingDescription": "The ultimate fishing implement! Gives 40 fishing levels, 100 bait power, 100 reel power, and 60 bonus rarity. Enhances ancient fishing.",
+    "extraTooltipInfo": "The origin of this mythical equipment is lost to history but there is no doubt regarding its power. Enhances ancient fishing.",
     "category": "Fishing",
     "enchantable": true,
     "augmentationStats": [
@@ -14196,8 +14359,11 @@
       "light": 0,
       "dark": 0
     },
+    "relatedSkill": "fishing",
     "itemImage": "/images/fishing/equipment/smock.png",
-    "extraTooltipInfo": "A smock for fishing! You can already feel it making your tools stronger. Item Set: 'Fisherman' - Wearing three pieces apply Master Fisherman, which increases all fishing stats by 10%.",
+    "itemSet": ["fishing set"],
+    "itemSetDescription": "Fisherman - Wearing three pieces apply Master Fisherman, which increases all fishing stats by 10%.",
+    "extraTooltipInfo": "A smock for fishing! You can already feel it making your tools stronger.",
     "class": "equipment",
     "visual": "smock",
     "augmentationStats": [
@@ -14250,8 +14416,11 @@
       "light": 0,
       "dark": 0
     },
+    "relatedSkill": "fishing",
     "itemImage": "/images/fishing/equipment/bucket_hat.png",
-    "extraTooltipInfo": "A hat for fishing! You can already feel it making your reflexes sharper. Item Set: 'Fisherman' - Wearing three pieces apply Master Fisherman, which increases all fishing stats by 10%.",
+    "itemSet": ["fishing set"],
+    "itemSetDescription": "Fisherman - Wearing three pieces apply Master Fisherman, which increases all fishing stats by 10%.",
+    "extraTooltipInfo": "A hat for fishing! You can already feel it making your reflexes sharper.",
     "class": "equipment",
     "visual": "bucket-hat",
     "augmentationStats": [
@@ -14304,8 +14473,11 @@
       "light": 0,
       "dark": 0
     },
+    "relatedSkill": "fishing",
     "itemImage": "/images/fishing/equipment/waders.png",
-    "extraTooltipInfo": "Waders for fishing! You can already feel it making your ability to bait fish stronger. Item Set: 'Fisherman' - Wearing three pieces apply Master Fisherman, which increases all fishing stats by 10%.",
+    "itemSet": ["fishing set"],
+    "itemSetDescription": "Fisherman - Wearing three pieces apply Master Fisherman, which increases all fishing stats by 10%.",
+    "extraTooltipInfo": "Waders for fishing! You can already feel it making your ability to bait fish stronger.",
     "class": "equipment",
     "visual": "waders",
     "augmentationStats": [
@@ -14322,6 +14494,7 @@
     "tradeable": false,
     "itemImage": "/images/misc/slayertoken.png",
     "questItem": true,
+    "heat": 1,
     "extraTooltipInfo": "A type of trophy taken from a slain foe.",
     "class": "gem",
     "tags": ["quest", "task"]
@@ -14332,6 +14505,7 @@
     "tradeable": false,
     "itemImage": "/images/misc/itemtoken.png",
     "questItem": true,
+    "heat": 1,
     "extraTooltipInfo": "A token representing that some item was obtained.",
     "class": "gem",
     "tags": ["quest", "task"]
@@ -14342,6 +14516,7 @@
     "tradeable": false,
     "itemImage": "/images/misc/locationtoken.png",
     "questItem": true,
+    "heat": 1,
     "extraTooltipInfo": "A token representing that some action was completed.",
     "class": "gem",
     "tags": ["quest", "task"]

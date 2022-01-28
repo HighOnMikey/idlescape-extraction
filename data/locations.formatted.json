@@ -666,6 +666,7 @@
       "name": "Magic Ice Bar",
       "activeMessage": "Smelting magic ice bars",
       "skill": "smithing",
+      "active": false,
       "level": 1,
       "requiredResources": { "2": 100, "7013": 2 },
       "experience": 100,
@@ -691,7 +692,7 @@
       "time": 20000,
       "skill": "mining",
       "hasDangerousEncounters": true,
-      "active": true,
+      "active": false,
       "lockout": {
         "skill": "mining",
         "name": "northPoleQuarry",
@@ -720,7 +721,7 @@
       "time": 20000,
       "skill": "foraging",
       "hasDangerousEncounters": true,
-      "active": true,
+      "active": false,
       "lockout": {
         "skill": "foraging",
         "name": "evergreenForest",
@@ -749,7 +750,7 @@
       "time": 10000,
       "skill": "fishing",
       "hasDangerousEncounters": true,
-      "active": true,
+      "active": false,
       "lockout": {
         "skill": "fishing",
         "name": "gummyLake",
@@ -843,7 +844,7 @@
   },
   "614": {
     "name": "Stormier Seas",
-    "id": 613,
+    "id": 614,
     "scrollID": 8010,
     "announceMonstersLeft": true
   },
