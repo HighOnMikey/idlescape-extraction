@@ -56,6 +56,7 @@ def build_json(name, data):
                 file.write(f"{objs[0]}.{objs[1]} = function(self, key, val) {{ self[key] = val; }}\n")
 
             file.write(f"{data}\n")
+            file.write(f'for (let {name[0]} in {name}) {{ if (typeof {name}[{name[0]}].getTooltip === "function") {{ {name}[{name[0]}].tooltip = {name}[{name[0]}].getTooltip({name}[{name[0]}].strengthPerLevel, 1);}}}}\n')
             file.write(f'fs.writeFileSync("{json_file.as_posix()}", JSON.stringify({name}), "utf-8")\n')
         logging.info(f"wrote {js_file}")
     except Exception as e:
