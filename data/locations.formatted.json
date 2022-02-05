@@ -43,6 +43,7 @@
   },
   "12": {
     "name": "Grasslands",
+    "combatName": "Farm",
     "id": 12,
     "locationIcon": "",
     "locationCoords": [0, 0],

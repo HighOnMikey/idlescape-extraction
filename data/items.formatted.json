@@ -229,6 +229,7 @@
     "tradeable": true,
     "experience": 125,
     "isFish": true,
+    "isIngredient": true,
     "itemImage": "/images/fishing/raw_shark.png",
     "class": "fish",
     "extraTooltipInfo": "A big toothy fish. It's a fish, right?",
@@ -9363,7 +9364,7 @@
     },
     "craftingLevel": 99,
     "craftingExperience": 192000,
-    "value": 5000000,
+    "value": 7500000,
     "defenseBonus": {
       "stab": 15,
       "slash": 15,
@@ -9401,8 +9402,7 @@
       "404": 3,
       "1548": 1
     },
-    "price": 30000000,
-    "value": 5000000,
+    "value": 10000000,
     "relatedAbility": 30,
     "defenseBonus": {
       "stab": 18,
@@ -9596,13 +9596,12 @@
     "slot": "weapon",
     "enchantmentTier": 8,
     "augmentationCost": {
-      "207": 25,
+      "207": 10,
       "304": 750,
       "305": 500,
       "306": 250,
-      "403": 3,
-      "404": 1,
-      "516": 2500
+      "403": 4,
+      "516": 5000
     },
     "value": 6360000,
     "tradeable": true,
@@ -9733,17 +9732,17 @@
       "light": 0,
       "dark": 0
     },
-    "itemImage": "/images/combat/equipment/mantle_of_flame.png",
+    "itemImage": "/images/combat/equipment/mantle_of_flame.gif",
     "itemIcon": "/images/combat/equipment/mantle_of_flame.png",
     "itemSet": ["phoenix"],
     "itemSetDescription": "Phoenix's Flame - Gives a chance that increases with augments for a fatal blow to be rendered non-fatal; if this happens the Resurrection Sickness debuff (reduced healing, offensive, and defensive stats) with stacks equal to the hitpoints will be applied.",
     "extraTooltipInfo": "Wrap yourself in the cozy flames of a dying star and be reborn.",
     "class": "equipment",
-    "visual": "cape",
+    "visual": "phoenix-cape",
     "category": ["weapon", "combat"],
     "augmentationStats": [
       { "description": "Strength (Melee):", "value": 0.5 },
-      { "description": "Strength (Magic):", "value": 3 },
+      { "description": "Strength (Magic):", "value": 2 },
       { "description": "Attack (Accuracy):", "value": 1 },
       { "description": "Defense (Stab):", "value": -3 },
       { "description": "Defense (Slash):", "value": -3 },
@@ -12297,8 +12296,8 @@
     "craftingMultiplier": [8],
     "craftingExperience": 60,
     "itemImage": "/images/cooking/water_dust.png",
-    "craftingDescription": "Each craft results in 8 dust. Crushed up water rune. Not exactly a delicacy, but it might have some sort of effect when cooked.",
-    "extraTooltipInfo": "Crushed up water rune. Not exactly a delicacy, but it might have some sort of effect when cooked.",
+    "craftingDescription": "Each craft results in 8 dust. Crushed up water runes. Not exactly a delicacy, but it might have some sort of effect when cooked.",
+    "extraTooltipInfo": "Crushed up water runes. Not exactly a delicacy, but it might have some sort of effect when cooked.",
     "category": "Dungeon",
     "class": "cooking-ingredient",
     "tags": ["cooking", "ingredient"]
@@ -13155,10 +13154,11 @@
     "name": "Winter Essence",
     "essence": true,
     "tradeable": false,
-    "noVault": true,
+    "noVault": false,
     "itemImage": "/images/christmas/snow_essence.png",
     "extraTooltipInfo": "Winter essence can be gathered by doing non-combat Christmas event activities.",
-    "class": "rune"
+    "class": "rune",
+    "tags": ["christmas"]
   },
   "7039": {
     "id": 7039,
@@ -13183,19 +13183,11 @@
     "id": 7040,
     "name": "Angry Letter",
     "tradeable": false,
-    "noVault": true,
+    "noVault": false,
     "itemImage": "/images/christmas/angry_letter.png",
     "extraTooltipInfo": "An angrily worded letter from someone you threw a snowball at!",
     "class": "christmas-drop",
-    "time": 1000,
-    "tags": [
-      "christmas",
-      "ingredient",
-      "cooking",
-      "consumable",
-      "food",
-      "fishing"
-    ]
+    "tags": ["christmas"]
   },
   "7041": {
     "id": 7041,
@@ -13709,7 +13701,7 @@
     "champEncounter": 704,
     "enchantmentTier": 0,
     "maxAugLevel": 10,
-    "augmentationCost": { "5": 10000, "113": 250, "512": 500 },
+    "augmentationCost": { "5": 10000, "113": 250, "512": 500, "9013": 1 },
     "requiredResources": {
       "5": 20000,
       "113": 750,
