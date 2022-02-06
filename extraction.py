@@ -7,6 +7,7 @@ import logging
 import regex
 import subprocess
 from pathlib import Path
+from jinja2 import Environment, FileSystemLoader
 
 logging.basicConfig(
     level=logging.INFO,
@@ -16,12 +17,19 @@ idlescape_site = "https://www.idlescape.com"
 default_main_chunk = "https://www.idlescape.com/static/js/main.27754d83.chunk.js"
 output_dir = Path(__file__).resolve().parent.joinpath("data")
 skill_names = ["combat", "fishing", "foraging", "mining", "smithing"]
+template_loader = FileSystemLoader("templates")
+template_env = Environment(loader=template_loader)
+
+
+def debug_enabled():
+    return logging.root.level == logging.DEBUG
 
 
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--url")
     parser.add_argument("--format", action="store_true")
+    parser.add_argument("--debug", action="store_true")
     return parser.parse_args()
 
 
@@ -43,30 +51,33 @@ def fetch_data(url):
 
 
 def build_json(name, data):
+    getToolTipJS = '''
+    for (let {1} in {0}) {{ 
+        if (typeof {0}[{1}].getTooltip === "function") {{ 
+            {0}[{1}].tooltip = {0}[{1}].getTooltip({0}[{1}].strengthPerLevel, 1);
+        }}
+    }}
+    '''
     js_file = output_dir.joinpath(f"{name}.js")
     json_file = output_dir.joinpath(f"{name}.json")
     try:
+        template = template_env.get_template("data_type.js")
         object_re = r"Object\(([a-zA-Z.]+)\)"
         obj = regex.search(object_re, data)
+        if obj is not None and len(obj) > 1:
+            obj = obj[1].split(".")
+        else:
+            obj = None
         with open(js_file, "w", newline="\n") as file:
-            file.write('fs = require("fs")\n')
-            if obj is not None and len(obj) > 1:
-                objs = obj[1].split(".")
-                file.write(f"let {objs[0]} = {{}}\n")
-                file.write(f"{objs[0]}.{objs[1]} = function(self, key, val) {{ self[key] = val; }}\n")
-
-            file.write(f"{data}\n")
-            file.write(f'for (let {name[0]} in {name}) {{ if (typeof {name}[{name[0]}].getTooltip === "function") {{ {name}[{name[0]}].tooltip = {name}[{name[0]}].getTooltip({name}[{name[0]}].strengthPerLevel, 1);}}}}\n')
-            file.write(f'fs.writeFileSync("{json_file.as_posix()}", JSON.stringify({name}), "utf-8")\n')
+            file.write(template.render(data_type=name, object_var=obj, data=data, json_file=json_file.as_posix()))
         logging.info(f"wrote {js_file}")
     except Exception as e:
-        logging.error(f"unable to compile {name}: {e}")
-
+        logging.error(f"unable to compile {name}: {e}", exc_info=debug_enabled())
     try:
         subprocess.call(["node", js_file])
         logging.info(f"converted {js_file.name} to JSON")
     except Exception as e:
-        logging.error(f"unable to convert {name}: {e}")
+        logging.error(f"unable to convert {name}: {e}", exc_info=debug_enabled())
 
     return json_file
 
@@ -87,7 +98,7 @@ def minimize_json(data, search_keys: list, search_skills: bool = True):
 
 
 def minimize_names_only(data, search_skills: bool = True):
-    return {x:v["name"] for x, v in minimize_json(data, ["name"], search_skills).items()}
+    return {x: v["name"] for x, v in minimize_json(data, ["name"], search_skills).items()}
 
 
 def extract_locations(data):
@@ -105,14 +116,19 @@ def extract_enchantments(data):
 
 
 def extract_items(data):
-    item_look_between_re = r'([a-zA-Z0-9_$]+)(?=\=\{1:\{id:1,name:"Gold").+?([a-zA-Z0-9_$]+)(?=\=function\([a-zA-Z0-9_$]+\))'
-    item_look_between = regex.search(item_look_between_re, data)
+    item_search_re = r'([a-zA-Z0-9_$]+)(?=\=\{1:\{id:1,name:"Gold").+?([a-zA-Z0-9_$]+)(?=\=function\([a-zA-Z0-9_$]+\))'
+    item_search = regex.search(item_search_re, data)
 
-    if len(item_look_between.groups()) == 2:
-        logging.info(f"suitable look around terms found (between '{item_look_between.group(1)}' and '{item_look_between.group(2)}')")
-        item_re = fr"(?<={item_look_between.group(1)}\=)([\s\S]*?)(?=,{item_look_between.group(2)}\=)"
+    if len(item_search.groups()) == 2:
+        logging.info(
+            f"suitable look around terms found (between '{item_search.group(1)}' and '{item_search.group(2)}')"
+        )
+        item_re = rf"(?<={item_search.group(1)}\=)([\s\S]*?)(?=,{item_search.group(2)}\=)"
     else:
-        logging.error("could not find suitable terms to search between for item definitions, skipping item extraction...")
+        logging.error(
+            "could not find suitable terms to search between for item definitions, skipping item extraction...",
+            exc_info=debug_enabled()
+        )
         return
 
     items = regex.search(item_re, data)
@@ -127,12 +143,13 @@ def format_json(json_file):
         with open(formatted_file, "w", newline="\n") as file:
             subprocess.run([prettier, "--parser", "json", json_file], stdout=file)
     except Exception as e:
-        logging.error(f"unable to format {json_file}: {e}")
+        logging.error(f"unable to format {json_file}: {e}", exc_info=debug_enabled())
 
 
 def main():
     args = parse_args()
-
+    if args.debug:
+        logging.root.setLevel(logging.DEBUG)
     if not output_dir.exists():
         logging.info(f"creating output directory: {output_dir}")
         Path.mkdir(output_dir)
@@ -182,7 +199,7 @@ def main():
                 "augmentationStats",
                 "augmentationCost",
             ],
-            False
+            False,
         )
         json.dump(min_data, open(json_file.with_stem(f"{json_file.stem}.min"), "w"), separators=(",", ":"))
         name_data = minimize_names_only(json_data)
