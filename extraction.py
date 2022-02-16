@@ -14,7 +14,7 @@ logging.basicConfig(
     format="[%(levelname)8s][%(filename)s:%(lineno)s - %(funcName)s()] %(message)s",
 )
 idlescape_site = "https://www.idlescape.com"
-default_main_chunk = "https://www.idlescape.com/static/js/main.27754d83.chunk.js"
+default_main_chunk = "https://www.idlescape.com/static/js/main.eb1cd48b.chunk.js"
 output_dir = Path(__file__).resolve().parent.joinpath("data")
 skill_names = ["combat", "fishing", "foraging", "mining", "smithing"]
 template_loader = FileSystemLoader("templates")
@@ -132,6 +132,13 @@ def extract_items(data):
     return data_string
 
 
+def extract_abilities(data):
+    ability_search_re = r'(?=\{1:\{id:1,abilityName:"Auto Attack").+?(?=,[a-zA-Z0-9_$]+\=)'
+    ability_search = regex.search(ability_search_re, data)
+    data_string = f"let abilities={ability_search[0]}\n"
+    return data_string
+
+
 def format_json(json_file):
     try:
         prettier = "prettier.cmd" if platform.system() == "Windows" else "prettier"
@@ -177,6 +184,18 @@ def main():
 
         if args.format:
             logging.info(f"formatting {json_file.name}")
+            format_json(json_file)
+
+    logging.info("extracting abilities")
+    abilities = extract_abilities(data)
+    if abilities:
+        json_file = build_json("abilities", abilities)
+        json_data = json.load(open(json_file, "r"))
+        name_data = minimize_names_only(json_data, search_skills=False, name_field="abilityName")
+        json.dump(name_data, open(json_file.with_stem(f"{json_file.stem}.names"), "w"), separators=(",", ":"))
+
+        if args.format:
+            logging.info("formatting {json_file.name}")
             format_json(json_file)
 
     logging.info("extracting items")
