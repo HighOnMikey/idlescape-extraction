@@ -9697,7 +9697,7 @@
     "id": 1555,
     "slot": "cape",
     "enchantmentTier": 0,
-    "augmentationCost": { "2": 15000, "512": 2500, "700": 1000, "9013": 1 },
+    "augmentationCost": { "2": 15000, "512": 2500, "700": 1000, "9014": 1 },
     "value": 3120000,
     "tradeable": true,
     "defenseBonus": {
@@ -13701,7 +13701,7 @@
     "champEncounter": 704,
     "enchantmentTier": 0,
     "maxAugLevel": 10,
-    "augmentationCost": { "5": 10000, "113": 250, "512": 500, "9013": 1 },
+    "augmentationCost": { "5": 10000, "113": 250, "512": 500, "9014": 1 },
     "requiredResources": {
       "5": 20000,
       "113": 750,
