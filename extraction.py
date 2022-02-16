@@ -51,13 +51,6 @@ def fetch_data(url):
 
 
 def build_json(name, data):
-    getToolTipJS = '''
-    for (let {1} in {0}) {{ 
-        if (typeof {0}[{1}].getTooltip === "function") {{ 
-            {0}[{1}].tooltip = {0}[{1}].getTooltip({0}[{1}].strengthPerLevel, 1);
-        }}
-    }}
-    '''
     js_file = output_dir.joinpath(f"{name}.js")
     json_file = output_dir.joinpath(f"{name}.json")
     try:
@@ -86,19 +79,22 @@ def minimize_json(data, search_keys: list, search_skills: bool = True):
     json_minimized_data = {}
     for key in data:
         json_minimized_data[key] = {}
-        for min_key in set(data[key].keys()).intersection(search_keys):
-            json_minimized_data[key][min_key] = data[key][min_key]
+        for min_key in search_keys:
+            if min_key in data[key].keys():
+                json_minimized_data[key][min_key] = data[key][min_key]
         if not search_skills:
             continue
-        for skill_key in set(data[key].keys()).intersection(skill_names):
-            for min_key in set(data[key][skill_key].keys()).intersection(search_keys):
-                json_minimized_data[key][min_key] = data[key][skill_key][min_key]
+        for skill_key in skill_names:
+            if skill_key in data[key].keys():
+                for min_key in search_keys:
+                    if min_key in data[key][skill_key].keys():
+                        json_minimized_data[key][min_key] = data[key][skill_key][min_key]
 
     return json_minimized_data
 
 
-def minimize_names_only(data, search_skills: bool = True):
-    return {x: v["name"] for x, v in minimize_json(data, ["name"], search_skills).items()}
+def minimize_names_only(data, search_skills: bool = True, name_field: str = "name"):
+    return {x: v[name_field] for x, v in minimize_json(data, [name_field], search_skills).items()}
 
 
 def extract_locations(data):
@@ -199,7 +195,7 @@ def main():
                 "augmentationStats",
                 "augmentationCost",
             ],
-            False,
+            search_skills=False,
         )
         json.dump(min_data, open(json_file.with_stem(f"{json_file.stem}.min"), "w"), separators=(",", ":"))
         name_data = minimize_names_only(json_data)
