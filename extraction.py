@@ -123,7 +123,7 @@ def extract_items(data):
     else:
         logging.error(
             "could not find suitable terms to search between for item definitions, skipping item extraction...",
-            exc_info=debug_enabled()
+            exc_info=debug_enabled(),
         )
         return
 
